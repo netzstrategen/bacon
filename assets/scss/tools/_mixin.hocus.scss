@@ -1,0 +1,10 @@
+//
+// Generate :hover and :focus in one go
+// --------------------------------------------------
+
+@mixin hocus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}

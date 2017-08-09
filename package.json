@@ -1,0 +1,19 @@
+{
+  "name": "Bacon",
+  "title": "Netz baseline CSS framework",
+  "author": "Tom Hare",
+  "url": "http://netzstrategen.com",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-stylelint": "^3.9.0",
+    "stylelint": "^7.13.0",
+    "stylelint-order": "^0.5.0",
+    "stylelint-scss": "^1.5.1"
+  }
+}

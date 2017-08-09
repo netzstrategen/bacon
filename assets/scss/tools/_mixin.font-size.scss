@@ -1,0 +1,35 @@
+//
+// px-to-rem font sizes with optional line-height
+// --------------------------------------------------
+
+@mixin font-size($font-size, $line-height: 'normal', $important: false) {
+
+  @if (type-of($font-size) == number) {
+    @if (unit($font-size) != "px") {
+      @error "`#{$font-size}` needs to be a pixel value.";
+    }
+  } @else {
+    @error "`#{$font-size}` needs to be a number.";
+  }
+
+  @if ($important == true) {
+    $important: !important;
+  } @else if ($important == false) {
+    $important: null;
+  } @else {
+    @error "`#{$important}` needs to be `true` or `false`.";
+  }
+
+  font-size: ($font-size / $global-font-size) * 1rem $important;
+
+  @if (type-of($line-height) == number or $line-height == 'inherit' or $line-height == 'normal') {
+
+    @if (unit($line-height) == "px") {
+      $line-height: $line-height / $font-size;
+    }
+
+    line-height: $line-height $important;
+
+  }
+
+}

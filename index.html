@@ -1,0 +1,224 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Bacon</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/css/bacon.css">
+    <link rel="stylesheet" href="dist/css/docs.css">
+  </head>
+  <body>
+
+    <header class="docs-header">
+      <div class="container">
+        <h1>Bacon styleguide</h1>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+
+        <h2>Colors</h2>
+
+        <div class="notes">These groups are organised (as named) into sub-maps of the <code>$global-colors</code> map to try and keep all color definitions together. To Access colors via the <code>color()</code> function passing the group and key. E.g. <code>color(brand, secondary)</code>.</div>
+
+        <h3>Brand</h3>
+        <ul class="color-blocks color-blocks--brand">
+          <li><strong>base</strong></li>
+          <li><strong>secondary</strong></li>
+          <li><strong>tertiary</strong></li>
+          <li><strong>accent</strong></li>
+        </ul>
+
+        <h3>Greyscale</h3>
+        <ul class="color-blocks color-blocks--grayscale">
+          <li><strong>base</strong></li>
+          <li><strong>dark</strong></li>
+          <li><strong>grey</strong></li>
+          <li><strong>light</strong></li>
+          <li><strong>off white</strong></li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <h2>Buttons</h2>
+
+        <div class="notes"><code>.button</code> gives you the basic greyscale button and then use the modifier classes to change colors and sizes.</div>
+
+        <h3>Button <code>.button</code></h3>
+        <a class="button" href="">Button</a>
+        <a class="button" href="" disabled>Disabled</a>
+
+        <h3>Primary <code>.button--primary</code></h3>
+        <a class="button button--primary" href="">Primary</a>
+
+        <h3>Hollow <code>.button--hollow</code></h3>
+        <a class="button button--hollow" href="">Hollow</a>
+        <a class="button button--hollow" href="" disabled>Disabled</a>
+
+        <h3>Link button <code>.button--link</code></h3>
+        <a class="button button--link" href="">Link button</a>
+
+        <h3>Small <code>.button--small</code></h3>
+        <a class="button button--small" href="">Small</a>
+
+        <h3>Full width <code>.button--full</code></h3>
+        <a class="button button--full" href="">Full width</a>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <h2>Form elements</h2>
+
+        <h3>Fieldset <code>.fieldset</code></h3>
+        <div class="notes">To encourage the use of <code>&lt;fieldset&gt;</code> for accessibility, default styling has been removed and abstracted to the <code>.fieldset</code> class.</div>
+        <fieldset class="fieldset">
+          <legend>Fieldset</legend>
+        </fieldset>
+
+        <h3>Label</h3>
+        <label>Label for input</label>
+
+        <h3>Text inputs</h3>
+        <label>Input label:</label>
+        <input type="text" placeholder="Enter some text...">
+
+        <h3>Textarea</h3>
+        <label>Textarea label:</label>
+        <textarea placeholder="Textarea for more text"></textarea>
+
+        <h3>Select</h3>
+        <label>Select label:</label>
+        <select>
+          <option disabled selected>Kategorien...</option>
+          <option>Blaulicht</option>
+          <option>Lokales</option>
+          <option>Nachrichten</option>
+          <option>Anzeigen</option>
+        </select>
+
+        <h3>Checkboxes <code>label.checkbox</code></h3>
+        <div class="notes">Always wrap <code>&lt;input type="checkbox"&gt;</code> in a <code>&lt;label&gt;</code> tag. This binds the label to the input without the need for the <code>for="id"</code> attribute meaning that the input can be reused if needed.</div>
+        <label class="checkbox">
+          <input type="checkbox">
+          Checkbox one
+        </label>
+        <label class="checkbox">
+          <input type="checkbox">
+          Checkbox two
+        </label>
+        <label class="checkbox">
+          <input type="checkbox">
+          Checkbox three
+        </label>
+
+        <h3>Radios <code>label.radio</code></h3>
+        <label class="radio">
+          <input type="radio" name="radio">
+          Radio one
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio">
+          Radio two
+        </label>
+        <label class="radio">
+          <input type="radio" name="radio">
+          Radio three
+        </label>
+
+        <h3>Helper text <code>.help-text</code></h3>
+        <input type="password" placeholder="Enter a password">
+        <p class="help-text">Your password must be at least eight characters long and contain at least one number.</p>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <h2>Alert messages</h2>
+
+        <h3>Alert <code>.alert</code></h3>
+        <div class="alert">This is a regular notification message.</div>
+
+        <h3>Warning <code>.alert--warning</code></h3>
+        <div class="alert alert--warning">This is a warning message.</div>
+
+        <h3>Success <code>.alert--success</code></h3>
+        <div class="alert alert--success">This is a success message.</div>
+
+        <h3>Error <code>.alert--error</code></h3>
+        <div class="alert alert--error">This is an error message.</div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+      <h2>Tags</h2>
+
+      <h3>Tag <code>.tag</code></h3>
+      <p><span class="tag">.tag</span></p>
+      <p><span class="tag tag--white">.tag--white</span></p>
+      <p><span class="tag tag--black">.tag--black</span></p>
+      <p><span class="tag tag--dark">.tag--dark</span></p>
+      <p><span class="tag tag--primary">.tag--primary</span></p>
+      <p><span class="tag tag--secondary">.tag--secondary</span></p>
+      <p><span class="tag tag--tertiary">.tag--tertiary</span></p>
+      <p><span class="tag tag--accent">.tag--accent</span></p>
+      <p><span class="tag tag--notification">.tag--notification</span></p>
+      <p><span class="tag tag--warning">.tag--warning</span></p>
+      <p><span class="tag tag--success">.tag--success</span></p>
+      <p><span class="tag tag--error">.tag--error</span></p>
+
+      <h3>Tags list <code>.tags</code></h3>
+      <div class="notes">To group tags together with appropriate spacing, wrap in <code>.tags</code>.</div>
+      <div class="tags">
+        <span class="tag">Eins</span>
+        <span class="tag">Zwei</span>
+        <span class="tag">Drei</span>
+        <span class="tag">Vier</span>
+      </div>
+      <br>
+
+      <div class="notes">Longer lines will wrap but maintain spacing.</div>
+      <div class="tags">
+        <span class="tag">Eins</span>
+        <span class="tag">Zwei</span>
+        <span class="tag">Drei</span>
+        <span class="tag">Vier</span>
+        <span class="tag">Fünf</span>
+        <span class="tag">Sechs</span>
+        <span class="tag">Sieben</span>
+        <span class="tag">Acht</span>
+        <span class="tag">Neun</span>
+        <span class="tag">Zehn</span>
+        <span class="tag">Elf</span>
+        <span class="tag">Zwölf</span>
+        <span class="tag">Dreizehn</span>
+        <span class="tag">Vierzehn</span>
+        <span class="tag">Fünfzehn</span>
+        <span class="tag">Sechzehn</span>
+        <span class="tag">Siebzehn</span>
+        <span class="tag">Achtzehn</span>
+        <span class="tag">Neunzehn</span>
+        <span class="tag">Zwanzig</span>
+        <span class="tag">Einundzwanzig</span>
+        <span class="tag">Zweiundzwanzig</span>
+      </div>
+
+      </div>
+    </section>
+
+  </body>
+</html>

@@ -1,0 +1,50 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Global
+// --------------------------------------------------
+
+html {
+  font-family: $global-font-family;
+  font-size: ($global-font-size / 16px) * 1em;
+  font-weight: $global-font-weight;
+  line-height: $global-line-height / $global-font-size;
+  color: color(type);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+// Headings
+// --------------------------------------------------
+
+/* stylelint-disable selector-list-comma-newline-after */
+h1, h2, h3, h4, h5, h6,
+.alpha, .beta, .gamma, .delta {
+  font-weight: $global-heading-weight;
+}
+/* stylelint-enable selector-list-comma-newline-after */
+
+h1,
+.alpha {
+  @include font-size($global-font-size-h1, $global-line-height-h1);
+}
+
+h2,
+.beta {
+  @include font-size($global-font-size-h2, $global-line-height-h2);
+}
+
+h3,
+.gamma {
+  @include font-size($global-font-size-h3, $global-line-height-h3);
+}
+
+h4,
+.delta {
+  @include font-size($global-font-size-h4, $global-line-height-h4);
+}

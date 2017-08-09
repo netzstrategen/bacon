@@ -1,0 +1,83 @@
+//
+// Global settings
+// --------------------------------------------------
+
+
+// Colours
+// --------------------------------------------------
+
+$global-colors: (
+  brand: (
+    base: #1796e1,
+    secondary: #1bb2fe,
+    tertiary: #0377c0,
+    accent: #fada00
+  ),
+  grayscale: (
+    base: #000,
+    dark: #3c3c3c,
+    mid: #676c71,
+    light: #b1b9c3,
+    off-white: #ededed
+  ),
+  type: (
+    base: #444
+  ),
+  link: (
+    base: #1796e1,
+    hocus: #1bb2fe,
+    active: #0377c0,
+    visited: #5d0591
+  ),
+  notifications: (
+    base: #a7e0e9,
+    warning: #fff9cb,
+    success: #8df0bb,
+    error: #fec9c8
+  )
+);
+
+// Grab colors from the map using `color(brand, secondary)` or `color(brand)`.
+@function color($palette, $tone: 'base', $default: $global-colors) {
+  @return map-get(map-get($default, $palette), $tone);
+}
+
+
+// Document
+// --------------------------------------------------
+
+$body-bg: #fff;
+
+
+// Typography
+// --------------------------------------------------
+
+$global-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$alt-font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+
+$global-font-size: 16px;
+$global-line-height: 24px;
+$global-font-weight: 400;
+
+$global-font-size-h1: 32px;
+$global-line-height-h1: 48px;
+$global-font-size-h2: 24px;
+$global-line-height-h2: 36px;
+$global-font-size-h3: 20px;
+$global-line-height-h3: 30px;
+$global-font-size-h4: 18px;
+$global-line-height-h4: 27px;
+
+$global-heading-weight: 600;
+
+
+// Spacing
+// --------------------------------------------------
+
+$global-spacing-unit: round($global-line-height);
+
+
+// Others
+// --------------------------------------------------
+
+$global-transition: 0.1s ease-in-out;

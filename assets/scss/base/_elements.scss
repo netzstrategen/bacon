@@ -1,0 +1,61 @@
+//
+// Base HTML element styling
+// --------------------------------------------------
+
+
+// Shared spacing for certain elements
+// --------------------------------------------------
+
+/* stylelint-disable selector-list-comma-newline-after */
+address,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, ol, ul,
+figure,
+hr,
+table,
+fieldset {
+  margin-bottom: $global-spacing-unit;
+}
+/* stylelint-enable selector-list-comma-newline-after */
+
+
+// Links
+// --------------------------------------------------
+
+a {
+  // color: color(link);
+
+  @include hocus {
+    color: color(link, hocus);
+  }
+
+  &:active {
+    color: color(link, active);
+  }
+}
+
+
+// Images
+// --------------------------------------------------
+
+img {
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+img[width],
+img[height] {
+  max-width: none;
+}
+
+
+// Consistent indentation for lists
+// --------------------------------------------------
+
+/* stylelint-disable selector-list-comma-newline-after */
+dd, ol, ul {
+  margin-left: $global-spacing-unit;
+}
+/* stylelint-enable selector-list-comma-newline-after */

@@ -1,0 +1,132 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+$button-padding-y: 1em !default;
+$button-padding-x: 4em !default;
+
+$button-border-width: 2px !default;
+$button-border-radius: 2px !default;
+
+$button-small-text: 0.75rem !default;
+$button-small-padding-y: 1em !default;
+$button-small-padding-x: 1.5em !default;
+
+
+.button {
+  display: inline-block;
+  padding: $button-padding-y $button-padding-x;
+  border: $button-border-width transparent solid;
+  border-radius: $button-border-radius;
+  margin: 0;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  background-color: color(grayscale, dark);
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  // transition: background $global-transition, color $global-transition;
+  text-decoration: none;
+
+  @include hocus {
+    background-color: color(grayscale, mid);
+    color: #fff;
+  }
+
+  &:active {
+    background-color: #000;
+    color: #fff;
+  }
+
+  &[disabled] {
+    background-color: color(grayscale, light);
+    cursor: not-allowed;
+  }
+}
+
+
+// Small button
+// --------------------------------------------------
+
+.button--small {
+  padding: $button-small-padding-y $button-small-padding-x;
+  font-size: $button-small-text;
+}
+
+
+// Full width button
+// --------------------------------------------------
+
+.button--full {
+  display: block;
+}
+
+
+// Primary brand button
+// --------------------------------------------------
+
+.button--primary {
+  background-color: color(brand);
+
+  @include hocus {
+    background-color: color(brand, secondary);
+  }
+
+  &:active {
+    background-color: color(brand, tertiary);
+  }
+}
+
+
+// Hollow button
+// --------------------------------------------------
+
+.button--hollow {
+  border-color: color(brand);
+  background-color: transparent;
+  color: color(brand);
+
+  @include hocus {
+    border-color: color(brand, secondary);
+    background-color: transparent;
+    color: color(brand, secondary);
+  }
+
+  &:active {
+    border-color: color(brand, tertiary);
+    background-color: transparent;
+    color: color(brand, tertiary);
+  }
+
+  &[disabled] {
+    border-color: color(grayscale, light);
+    color: color(grayscale, light);
+    background-color: transparent;
+  }
+}
+
+
+// Link button
+// --------------------------------------------------
+
+.button--link {
+  padding-right: 0;
+  padding-left: 0;
+  border-width: 0;
+  background-color: transparent;
+  color: color(brand);
+  text-transform: none;
+
+  @include hocus {
+    background-color: transparent;
+    color: color(brand, secondary);
+  }
+
+  &:active {
+    background-color: transparent;
+    color: color(brand, tertiary);
+  }
+}

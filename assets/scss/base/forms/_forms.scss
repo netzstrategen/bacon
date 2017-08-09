@@ -1,0 +1,50 @@
+//
+// Base form styling
+// --------------------------------------------------
+
+
+$input-padding-y: 1em !default;
+$input-padding-x: 1em !default;
+$input-font-size: 1em !default;
+$input-line-height: 1.5 !default;
+
+$input-border-width: 1px !default;
+$input-border-color: color(grayscale, light) !default;
+$input-radius: 0 !default;
+$input-background: transparent !default;
+$input-shadow: none !default;
+$input-transition: $global-transition !default;
+
+$input-border-focus: 1px color(brand) solid !default;
+$input-background-focus: $input-background !default;
+$input-shadow-focus: $input-shadow !default;
+
+
+@mixin form-element {
+  display: block;
+  width: 100%;
+  padding: $input-padding-y $input-padding-x;
+  border: $input-border-width $input-border-color solid;
+  border-radius: $input-radius;
+  appearance: none;
+  background-color: $input-background;
+  box-shadow: $input-shadow;
+  line-height: $input-line-height;
+  // transition: border $input-transition;
+
+  &:focus {
+    border: $input-border-focus;
+    outline: none;
+    background-color: $input-background-focus;
+    box-shadow: $input-shadow-focus;
+  }
+}
+
+@import
+  'fieldset',
+  'label',
+  'text',
+  'select',
+  'choice',
+  'help-text'
+;

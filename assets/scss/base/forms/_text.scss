@@ -1,0 +1,30 @@
+//
+// Text inputs
+// --------------------------------------------------
+
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea {
+  @include form-element;
+}
+
+textarea {
+  max-width: 100%;
+
+  &[rows] {
+    height: auto;
+  }
+}

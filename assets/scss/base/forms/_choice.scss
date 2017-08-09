@@ -1,0 +1,61 @@
+//
+// Choice inputs. Checkbox and radio
+// --------------------------------------------------
+
+
+$checkbox-external-spacing: 1em !default;
+$radio-spacing: $checkbox-external-spacing !default;
+
+
+//
+// Shared
+// --------------------------------------------------
+
+[type='checkbox']
+[type='radio'] {
+  vertical-align: baseline;
+}
+
+.checkbox,
+.radio {
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+//
+// Checkbox
+// Wrap <input> with <label class="checkbox">
+// --------------------------------------------------
+
+.checkbox {
+
+  // Shift up 1px
+  [type='checkbox'] {
+    position: relative;
+    top: -1px;
+  }
+
+  & + .checkbox {
+    margin-left: $checkbox-external-spacing;
+  }
+}
+
+
+//
+// Radio button
+// Wrap <input> with <label class="radio">
+// --------------------------------------------------
+
+.radio {
+
+  // Shift up 1px
+  [type='radio'] {
+    position: relative;
+    top: -1px;
+  }
+
+  & + .radio {
+    margin-left: $checkbox-external-spacing;
+  }
+}
