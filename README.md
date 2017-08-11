@@ -9,7 +9,11 @@
 
 ## Stylelint
 
-A Stylelint dotfile is included to enforce the coding style of the CSS and Sass. Also consider installing `SublimeLinter` and `SublimeLinter-contrib-stylelint` to get notifications in your text editor.
+A Stylelint dotfile is included to enforce the coding style of the CSS and Sass. 
+
+Also consider installing [`SublimeLinter`](http://www.sublimelinter.com/en/latest/installation.html) and [`SublimeLinter-contrib-stylelint`](https://github.com/kungfusheep/SublimeLinter-contrib-stylelint) to get notifications on Sublime Text.
+
+Instead, if you're using Atom, you can install [linter-stylelint](https://atom.io/packages/linter-stylelint) package.
 
 ## Authors
 
