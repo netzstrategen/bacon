@@ -1,9 +1,9 @@
-var gulp = require('gulp'),
-    autoprefixer = require('gulp-autoprefixer'),
-    plumber = require('gulp-plumber'),
-    sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
-    stylelint = require('gulp-stylelint');
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const plumber = require('gulp-plumber');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const stylelint = require('gulp-stylelint');
 
 const paths = {
   scss: ['./assets/scss/**/*.scss', '!./assets/scss/**/vendor/*.scss'],
