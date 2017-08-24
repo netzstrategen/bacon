@@ -1,6 +1,7 @@
 ![Bacon mmmmm](http://i.imgur.com/XzmZ1ml.png)
 
 # Bacon styleguide
+![](https://app.buddy.works/netzstrategen/bacon/pipelines/pipeline/58278/badge.svg?token=631d0448c5c71a9ccb2b697e9807d47c12ceaed1928e4eeff07e545ee80fa40e)
 
 ## Installation
 
