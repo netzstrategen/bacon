@@ -1,6 +1,6 @@
 //
 // Choice inputs. Checkbox and radio
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 
 $checkbox-external-spacing: 1em !default;
@@ -9,7 +9,7 @@ $radio-spacing: $checkbox-external-spacing !default;
 
 //
 // Shared
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 [type='checkbox'],
 [type='radio'] {
@@ -26,7 +26,7 @@ $radio-spacing: $checkbox-external-spacing !default;
 //
 // Checkbox
 // Wrap <input> with <label class="checkbox">
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 .checkbox {
 
@@ -45,7 +45,7 @@ $radio-spacing: $checkbox-external-spacing !default;
 //
 // Radio button
 // Wrap <input> with <label class="radio">
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 .radio {
 

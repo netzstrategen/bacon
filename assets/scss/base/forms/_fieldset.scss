@@ -1,6 +1,6 @@
 //
 // Fieldset
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 
 $fieldset-padding: 0.75em !default;
@@ -10,7 +10,7 @@ $legend-padding-value: 0.25em !default;
 // To encourage the use of <fieldset> for accessibility,
 // default styling has been removed and abstracted to
 // this .fieldset class
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 fieldset {
   padding: 0;

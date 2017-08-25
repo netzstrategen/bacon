@@ -1,6 +1,6 @@
 //
 // Alert messages
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 
 $alert-padding: 1em !default;
@@ -31,7 +31,7 @@ $alert-error-border: transparent !default;
 
 
 // Warning alert
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 .alert--warning {
   border-color: $alert-warning-border;
@@ -41,7 +41,7 @@ $alert-error-border: transparent !default;
 
 
 // Success alert
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 .alert--success {
   border-color: $alert-success-border;
@@ -51,7 +51,7 @@ $alert-error-border: transparent !default;
 
 
 // Error alert
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 .alert--error {
   border-color: $alert-error-border;
