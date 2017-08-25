@@ -11,7 +11,7 @@ $radio-spacing: $checkbox-external-spacing !default;
 // Shared
 // --------------------------------------------------
 
-[type='checkbox']
+[type='checkbox'],
 [type='radio'] {
   vertical-align: baseline;
 }
