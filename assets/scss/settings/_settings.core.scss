@@ -37,7 +37,15 @@ $global-colors: (
   )
 );
 
-// Grab colors from the map using `color(brand, secondary)` or `color(brand)`.
+/// Grabs colors from the map using `color(brand, secondary)` or `color(brand)`.
+///
+/// @param {string} $palette
+/// @param {string} $tone ['base']
+/// @param {string} $default [$global-colors]
+///
+/// @return {string}
+/// ----------------------------------------------------------------------------
+
 @function color($palette, $tone: 'base', $default: $global-colors) {
   @return map-get(map-get($default, $palette), $tone);
 }
