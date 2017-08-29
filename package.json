@@ -1,10 +1,18 @@
 {
-  "name": "Bacon",
-  "title": "netzstrategen baseline CSS framework",
-  "author": "Tom Hare",
-  "url": "http://www.netzstrategen.com",
+  "name": "@netzstrategen/bacon",
   "version": "0.1.0",
-  "private": true,
+  "description": "netzstrategen baseline CSS framework",
+  "homepage": "http://www.netzstrategen.com",
+  "bugs": "https://github.com/netzstrategen/bacon/issues",
+  "author": "Tom Hare <tom@netzstrategen.com>",
+  "contributors": [
+    "Fabian Marz <fabian@netzstrategen.com>"
+  ],
+  "main": "dist/css/bacon.min.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netzstrategen/bacon.git"
+  },
   "devDependencies": {
     "gulp": "~3.9.1",
     "gulp-autoprefixer": "~4.0.0",
@@ -16,5 +24,6 @@
     "stylelint": "~7.13.0",
     "stylelint-order": "~0.5.0",
     "stylelint-scss": "~1.5.1"
-  }
+  },
+  "private": true
 }
