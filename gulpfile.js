@@ -4,6 +4,8 @@ const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const stylelint = require('gulp-stylelint');
+const cleanCss = require('gulp-clean-css');
+const rename = require('gulp-rename');
 
 const paths = {
   scss: ['./assets/scss/**/*.scss', '!./assets/scss/**/vendor/*.scss'],
@@ -23,6 +25,14 @@ gulp.task('scss', function () {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
+    // Output non-minified version
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(paths.dist))
+    // Output minified version and add related suffix
+    .pipe(cleanCss())
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dist));
 });
