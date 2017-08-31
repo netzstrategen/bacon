@@ -23,9 +23,9 @@ $alert-error-border: transparent !default;
 
 // * @define alert; weak */
 .alert {
-  margin: $alert-margin;
   padding: $alert-padding;
   border: $alert-border-width $alert-default-border solid;
+  margin: $alert-margin;
   background-color: $alert-default-bg;
   color: $alert-default-color;
 }
