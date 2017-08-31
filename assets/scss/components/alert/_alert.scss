@@ -21,6 +21,7 @@ $alert-error-color: darken(color(notifications, error), 20%) !default;
 $alert-error-border: transparent !default;
 
 
+// * @define alert; weak */
 .alert {
   padding: $alert-padding;
   border: $alert-border-width $alert-default-border solid;
