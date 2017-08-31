@@ -12,6 +12,7 @@ $tag-font-size: 0.75rem !default;
 $tags-space: 0.5em !default;
 
 
+// * @define tag; weak */
 .tag {
   display: inline-flex;
   align-items: center;
@@ -30,6 +31,7 @@ $tags-space: 0.5em !default;
 // Tags container
 // --------------------------------------------------
 
+// * @define tags; weak */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -48,6 +50,7 @@ $tags-space: 0.5em !default;
 // Tag variants
 // --------------------------------------------------
 
+// * @define tag; weak */
 .tag--black { background-color: #000; color: #fff; }
 .tag--white { background-color: #fff; }
 

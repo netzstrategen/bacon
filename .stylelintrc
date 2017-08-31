@@ -1,7 +1,8 @@
 {
   "plugins": [
     "stylelint-scss",
-    "stylelint-order"
+    "stylelint-order",
+    "stylelint-selector-bem-pattern"
   ],
   "ignoreFiles": [
     "vendor/**/*"
@@ -81,6 +82,18 @@
 
     "number-leading-zero": "always",
     "number-no-trailing-zeros": true,
+
+    "plugin/selector-bem-pattern": {
+      "componentName": "(([a-z0-9]+(?!-$)-?)+)",
+      "componentSelectors": {
+        "initial": "\\.{componentName}(((__|--)(([a-z0-9\\[\\]'=]+(?!-$)-?)+))+)?$"
+      },
+      "ignoreSelectors": [
+        ".*\\.no-js.*",
+        ".*\\.js-.*",
+        ".*\\.lt-ie.*"
+      ]
+    },
 
     "property-case": "lower",
     "property-no-unknown": true,
