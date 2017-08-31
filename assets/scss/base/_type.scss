@@ -7,15 +7,18 @@
 // -----------------------------------------------------------------------------
 
 html {
+  color: color(type);
   font-family: $global-font-family;
   font-size: ($global-font-size / 16px) * 1em;
   font-weight: $global-font-weight;
   line-height: $global-line-height / $global-font-size;
-  color: color(type);
+
+  /* stylelint-disable */
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  /* stylelint-enable */
 }
 
 

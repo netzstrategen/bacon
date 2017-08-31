@@ -13,9 +13,9 @@ $legend-padding-value: 0.25em !default;
 // -----------------------------------------------------------------------------
 
 fieldset {
+  margin: 0 0 $global-spacing-unit;
   padding: 0;
   border: 0;
-  margin: 0 0 $global-spacing-unit;
 }
 
 .fieldset {
@@ -23,7 +23,7 @@ fieldset {
   border: 1px color(grayscale, light) solid;
 
   legend {
-    padding: 0 $legend-padding-value;
     margin-left: -$legend-padding-value; // so it lines up with container content
+    padding: 0 $legend-padding-value;
   }
 }

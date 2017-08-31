@@ -17,20 +17,20 @@ $button-small-padding-x: 1.5em !default;
 // * @define button; weak */
 .button {
   display: inline-block;
+  margin: 0;
   padding: $button-padding-y $button-padding-x;
   border: $button-border-width transparent solid;
   border-radius: $button-border-radius;
-  margin: 0;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
   background-color: color(grayscale, dark);
+  color: #fff;
   font: inherit;
   font-weight: 600;
-  color: #fff;
-  text-transform: uppercase;
-  // transition: background $global-transition, color $global-transition;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  vertical-align: middle;
+  // transition: background $global-transition, color $global-transition;
 
   @include hocus {
     background-color: color(grayscale, mid);
@@ -106,8 +106,8 @@ $button-small-padding-x: 1.5em !default;
 
   &[disabled] {
     border-color: color(grayscale, light);
-    color: color(grayscale, light);
     background-color: transparent;
+    color: color(grayscale, light);
   }
 }
 

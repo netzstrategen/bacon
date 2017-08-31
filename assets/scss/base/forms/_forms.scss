@@ -28,8 +28,8 @@ $input-shadow-focus: $input-shadow !default;
   border-radius: $input-radius;
   appearance: none;
   background-color: $input-background;
-  box-shadow: $input-shadow;
   line-height: $input-line-height;
+  box-shadow: $input-shadow;
   // transition: border $input-transition;
 
   &:focus {
