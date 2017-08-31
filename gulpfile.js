@@ -23,7 +23,7 @@ gulp.task('scss', function () {
     }))
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dist));
 });
