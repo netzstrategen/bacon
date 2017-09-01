@@ -1,6 +1,10 @@
-//
-// Reset. Sits on top of normalize
-// -----------------------------------------------------------------------------
+/* ==========================================================================
+   Reset. Sits on top of normalize
+   ========================================================================== */
+
+/**
+ * Remove all intrusive padding and margin browser defaults.
+ */
 
 /* stylelint-disable */
 body,
@@ -16,8 +20,9 @@ fieldset, legend {
 /* stylelint-enable */
 
 
-// Remove trailing margins from nested lists.
-// -----------------------------------------------------------------------------
+/**
+ * Remove trailing margins from nested lists.
+ */
 
 li > {
 
@@ -29,8 +34,9 @@ li > {
 }
 
 
-// Remove default table spacing.
-// -----------------------------------------------------------------------------
+/**
+ * Remove default table spacing.
+ */
 
 table {
   border-collapse: collapse;

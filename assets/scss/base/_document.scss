@@ -1,20 +1,30 @@
-//
-// Base page styling
-// -----------------------------------------------------------------------------
+/* ==========================================================================
+   Base page styling
+   ========================================================================== */
 
+
+/**
+ * Document basics
+ *
+ * 1. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 2. Set everything to border-box by default but allow per-component changes.
+ *    http:/css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ */
 
 html {
-  overflow-y: scroll;
-  box-sizing: border-box;
-  min-height: 100%;
+  overflow-y: scroll; // [1]
+  box-sizing: border-box; // [2]
+  min-height: 100%; // [3]
 }
 
 * {
-
   &,
   &:before,
   &:after {
-    box-sizing: inherit;
+    box-sizing: inherit; // [2]
   }
 }
 

@@ -1,8 +1,10 @@
-//
-// Tags
-// Used for lists (categories) or as indicators
-// -----------------------------------------------------------------------------
+/* ==========================================================================
+   Tags
+   Used for lists (categories) or as indicators
+   ========================================================================== */
 
+
+// Component variables
 
 $tag-height: 2em !default;
 $tag-padding-x: 0.75em !default;
@@ -11,6 +13,10 @@ $tag-font-size: 0.75rem !default;
 
 $tags-space: 0.5em !default;
 
+
+/**
+ * Tag badge.
+ */
 
 // * @define tag; weak */
 .tag {
@@ -28,8 +34,11 @@ $tags-space: 0.5em !default;
 }
 
 
-// Tags container
-// -----------------------------------------------------------------------------
+/**
+ * Container for multiple Tag components.
+ *
+ * 1. Provides equal spacing for adjoining and stacked Tags.
+ */
 
 // * @define tags; weak */
 .tags {
@@ -38,17 +47,18 @@ $tags-space: 0.5em !default;
   align-items: center;
 
   .tag {
-    margin-bottom: $tags-space;
+    margin-bottom: $tags-space; // [1]
 
     &:not(:last-child) {
-      margin-right: $tags-space;
+      margin-right: $tags-space; // [1]
     }
   }
 }
 
 
-// Tag variants
-// -----------------------------------------------------------------------------
+/**
+ * Tag variants.
+ */
 
 // * @define tag; weak */
 .tag--black { background-color: #000; color: #fff; }

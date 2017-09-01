@@ -1,6 +1,9 @@
-//
-// Labels
-// -----------------------------------------------------------------------------
+/* ==========================================================================
+   Labels
+   ========================================================================== */
+
+
+// Component variables
 
 $label-margin: 0 !default;
 
@@ -9,6 +12,10 @@ $label-font-weight: 400 !default;
 $label-line-height: 1.5 !default;
 $label-color: color(grayscale, dark) !default;
 
+
+/**
+ * Form input label
+ */
 
 label {
   display: block;

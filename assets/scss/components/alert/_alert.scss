@@ -1,7 +1,9 @@
-//
-// Alert messages
-// -----------------------------------------------------------------------------
+/* ==========================================================================
+   Alert messages
+   ========================================================================== */
 
+
+// Component variables
 
 $alert-padding: 1em !default;
 $alert-border-width: 1px !default;
@@ -21,6 +23,10 @@ $alert-error-color: darken(color(notifications, error), 20%) !default;
 $alert-error-border: transparent !default;
 
 
+/**
+ * Alert message box.
+ */
+
 // * @define alert; weak */
 .alert {
   padding: $alert-padding;
@@ -31,8 +37,9 @@ $alert-error-border: transparent !default;
 }
 
 
-// Warning alert
-// -----------------------------------------------------------------------------
+/**
+ * Warning alert variant.
+ */
 
 .alert--warning {
   border-color: $alert-warning-border;
@@ -41,8 +48,9 @@ $alert-error-border: transparent !default;
 }
 
 
-// Success alert
-// -----------------------------------------------------------------------------
+/**
+ * Success alert variant.
+ */
 
 .alert--success {
   border-color: $alert-success-border;
@@ -51,8 +59,9 @@ $alert-error-border: transparent !default;
 }
 
 
-// Error alert
-// -----------------------------------------------------------------------------
+/**
+ * Error alert variant.
+ */
 
 .alert--error {
   border-color: $alert-error-border;

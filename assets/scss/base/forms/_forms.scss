@@ -1,7 +1,9 @@
-//
-// Base form styling
-// -----------------------------------------------------------------------------
+/* ==========================================================================
+   Base form styling
+   ========================================================================== */
 
+
+// Component variables
 
 $input-padding-y: 1em !default;
 $input-padding-x: 1em !default;
@@ -19,6 +21,10 @@ $input-border-focus: 1px color(brand) solid !default;
 $input-background-focus: $input-background !default;
 $input-shadow-focus: $input-shadow !default;
 
+
+/// Create form element with standardised styling.
+///
+/// ----------------------------------------------------------------------------
 
 @mixin form-element {
   display: block;
@@ -39,6 +45,7 @@ $input-shadow-focus: $input-shadow !default;
     box-shadow: $input-shadow-focus;
   }
 }
+
 
 @import
   'fieldset',
