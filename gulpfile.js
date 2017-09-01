@@ -59,10 +59,10 @@ gulp.task('sassdoc', function () {
     .pipe(sassdoc());
 });
 
-// gulp.task('clean', require('del').bind(null, paths.dist));
+gulp.task('clean-dist', require('del').bind(null, paths.dist));
 
-gulp.task('default', ['scss', 'sassdoc'], function () {
-  gulp.watch(paths.scss, ['scss', 'sassdoc']);
+gulp.task('default', ['scss'], function () {
+  gulp.watch(paths.scss, ['scss']);
 });
 
 module.exports = gulp; // Export the Gulp instance for use in Fractal CLI
