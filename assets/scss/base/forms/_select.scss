@@ -9,11 +9,11 @@ $select-height: calc(#{$input-font-size * $input-line-height + $input-padding-y 
 
 
 /**
- * Styled select input
+ * Styled select input.
  *
- * 1. Receives standardised form input styling
- * 2. Uses standardised font-size and line-height to match height of other inputs
- * 3. Inline SVG arrow icon
+ * 1. Receives standardised form input styling.
+ * 2. Uses standardised font-size and line-height to match height of other inputs.
+ * 3. Inline SVG arrow icon.
  */
 
 select {
