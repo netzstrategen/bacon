@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Base link styling
+   ========================================================================== */
+
+
+/**
+ * Default link styling.
+ */
+
+a {
+  // color: color(link);
+
+  @include hocus {
+    color: color(link, hocus);
+  }
+
+  &:active {
+    color: color(link, active);
+  }
+}

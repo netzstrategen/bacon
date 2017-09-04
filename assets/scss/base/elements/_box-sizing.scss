@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Global element box-sizing
+   ========================================================================== */
+
+
+/**
+ * 1. Set everything to border-box by default but allow per-component changes.
+ *    http:/css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+
+html {
+  box-sizing: border-box; // [1]
+}
+
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit; // [1]
+  }
+}
