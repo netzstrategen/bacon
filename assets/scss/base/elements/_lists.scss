@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Base list styling
+   ========================================================================== */
+
+
+/**
+ * Consistent indentation for lists.
+ *
+ * 1. Set a sensible browser default override.
+ */
+
+/* stylelint-disable selector-list-comma-newline-after */
+dd, ol, ul {
+  margin-left: $global-spacing-unit; // [1]
+}
+/* stylelint-enable selector-list-comma-newline-after */
