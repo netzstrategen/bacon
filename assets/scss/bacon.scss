@@ -5,6 +5,7 @@
 @import
   'settings/settings.core',
 
+  'tools/mixin.clearfix',
   'tools/mixin.font-size',
   'tools/mixin.hocus',
 
@@ -33,3 +34,6 @@
   'components/atoms/button/button',
   'components/atoms/alert/alert',
   'components/atoms/tag/tag',
+
+  'utilities/objects.media',
+  'utilities/helpers.display';
