@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Media object. The original and best.
+   Further: https://philipwalton.github.io/solved-by-flexbox/demos/media-object/
+   ========================================================================== */
+
+
+// Component variables
+
+$media-object-spacing: $global-spacing-unit !default;
+
+
+/**
+ * Base media object
+ */
+
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.media__figure {
+  margin-right: $media-object-spacing;
+}
+
+.media__body {
+  flex: 1;
+}
+
+
+/**
+ * Reverse media object (image on right)
+ */
+
+.media--rev {
+  align-items: flex-end;
+
+  .media__figure {
+    margin-right: 0;
+    margin-left: $media-object-spacing;
+  }
+}
