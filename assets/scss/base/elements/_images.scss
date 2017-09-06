@@ -5,19 +5,16 @@
 
 /**
  * 1. Fluid images for responsive purposes.
- * 2. Emphasise `alt` text if shown.
- * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ * 2. Ensure that images will be retain aspect ratio (and so be responsive)
+ *    even if explicit `width` and `height` attributes are set.
+ * 3. Emphasise `alt` text if shown.
+ * 4. Setting `vertical-align` removes the whitespace that appears under `img`
  *    elements. Safer alternative to using `display: block;`.
- * 4. If an image has explicit dimensions set then don't make it responsive.
  */
 
 img {
   max-width: 100%; // [1]
-  font-style: italic; // [2]
-  vertical-align: middle; // [3]
-}
-
-img[width],
-img[height] {
-  max-width: none; // [4]
+  height: auto; // [2]
+  font-style: italic; // [3]
+  vertical-align: middle; // [4]
 }
