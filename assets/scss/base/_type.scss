@@ -1,10 +1,13 @@
-//
-// Typography
-// --------------------------------------------------
+/* ==========================================================================
+   Typography
+   ========================================================================== */
 
 
-// Global
-// --------------------------------------------------
+/**
+ * Global typography defaults.
+ *
+ * 1. Improve font rendering on certain browsers.
+ */
 
 html {
   font-family: $global-font-family;
@@ -12,15 +15,16 @@ html {
   font-weight: $global-font-weight;
   line-height: $global-line-height / $global-font-size;
   color: color(type);
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%; // [1]
+  -ms-text-size-adjust: 100%; // [1]
+  -moz-osx-font-smoothing: grayscale; // [1]
+  -webkit-font-smoothing: antialiased; // [1]
 }
 
 
-// Headings
-// --------------------------------------------------
+/**
+ * H1-H6 headings.
+ */
 
 /* stylelint-disable selector-list-comma-newline-after */
 h1, h2, h3, h4, h5, h6,

@@ -1,7 +1,9 @@
-//
-// Buttons
-// --------------------------------------------------
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
 
+
+// Component variables
 
 $button-padding-y: 1em !default;
 $button-padding-x: 4em !default;
@@ -14,6 +16,14 @@ $button-small-padding-y: 1em !default;
 $button-small-padding-x: 1.5em !default;
 
 
+/**
+ * Standard button component.
+ *
+ * 1. Line different size buttons up vertically.
+ * 2. Force all buttons to appear clickable.
+ * 3. Force buttons to inherit font styles (particularly relevant for form inputs).
+ */
+
 // * @define button; weak */
 .button {
   display: inline-block;
@@ -21,11 +31,11 @@ $button-small-padding-x: 1.5em !default;
   border: $button-border-width transparent solid;
   border-radius: $button-border-radius;
   margin: 0;
-  vertical-align: middle;
+  vertical-align: middle; // [1]
   text-align: center;
-  cursor: pointer;
+  cursor: pointer; // [2]
   background-color: color(grayscale, dark);
-  font: inherit;
+  font: inherit; // [3]
   font-weight: 600;
   color: #fff;
   text-transform: uppercase;
@@ -51,8 +61,9 @@ $button-small-padding-x: 1.5em !default;
 }
 
 
-// Small button
-// --------------------------------------------------
+/**
+ * Small button variant.
+ */
 
 .button--small {
   padding: $button-small-padding-y $button-small-padding-x;
@@ -60,16 +71,18 @@ $button-small-padding-x: 1.5em !default;
 }
 
 
-// Full width button
-// --------------------------------------------------
+/**
+ * Full-width button variant.
+ */
 
 .button--full {
   display: block;
 }
 
 
-// Primary brand button
-// --------------------------------------------------
+/**
+ * Primary brand button variant.
+ */
 
 .button--primary {
   background-color: color(brand);
@@ -84,8 +97,9 @@ $button-small-padding-x: 1.5em !default;
 }
 
 
-// Hollow button
-// --------------------------------------------------
+/**
+ * Hollow button variant.
+ */
 
 .button--hollow {
   border-color: color(brand);
@@ -112,8 +126,9 @@ $button-small-padding-x: 1.5em !default;
 }
 
 
-// Link button
-// --------------------------------------------------
+/**
+ * Link button variant.
+ */
 
 .button--link {
   padding-right: 0;

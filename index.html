@@ -20,6 +20,119 @@
     <section class="section">
       <div class="container">
 
+        <h2>Coding style</h2>
+
+        <h3>Variables</h3>
+        <p>All global settings for typography, document, colour palette etc are stored in <code>settings/_settings.core.scss</code>. Component-specific settings should be set at the top of that component's file.</p>
+
+        <h4>Colour palette</h4>
+        <p>The global colour palette is contained within a Sass map called <code>$global-colors</code>. Colours within this map are grouped together according to their usage or subject. Each new colour group must, at a minimum, have a <code>base</code> colour entry. You can then add as many others as you wish.</p>
+        <pre>
+$global-colors: (
+  brand: (
+    base: #1796e1,
+    secondary: #1bb2fe,
+    tertiary: #0377c0,
+    accent: #fada00
+  ),
+  grayscale: (
+    base: #000,
+    dark: #3c3c3c,
+    mid: #676c71,
+    light: #b1b9c3,
+    off-white: #ededed
+  )
+);</pre>
+        <p>To access these colours, use the <code>color()</code> function.
+        <br><code>color(notifications)</code> will give you the default <code>base</code> colour from the <code>notifications</code> group.
+        <br><code>color(notifications, warning)</code> will give you the <code>warning</code> colour from the <code>notifications</code> group.</p>
+        <div class="notes">
+          <p>Advantage of using colour groups:</p>
+          <ul>
+            <li>Enforces consistency (via use of <code>color()</code> function)</li>
+            <li>Easy to identify where a brand colour is being used (by searching for the <code>color()</code> function)</li>
+            <li>Allows easy repitition where programatic utility classes are required (use a Sass <code>@for</code> on the map)</li>
+          </ul>
+        </div>
+
+        <h3>Whitespace</h3>
+        <p>Bacon is liberal with whitespace to aid readability. The general rule is two blank lines between blocks and one blank line inside blocks.</p>
+        <pre>
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+
+// Component variables
+
+$button-padding-y: 1em !default;
+$button-padding-x: 4em !default;
+
+
+/**
+ * Standard button component
+ */
+
+.button {
+  display: inline-block;
+  padding: $button-padding-y $button-padding-x;
+
+  &:active {
+    background-color: #000;
+    color: #fff;
+  }
+}</pre>
+        <p>It is important to follow these guidelines to ensure document flow but always prefer to put in one blank line too many than one too few should you be unsure.</p>
+
+        <h3>Commenting</h3>
+        <p>Bacon follows the commenting style outlined in Harry Roberts' <a href="https://cssguidelin.es" target="_blank">CSS Guidelines</a> plus a couple of Sass-y additions. Broadly, use C-style comment blocks to document code and for anything Sass-related, use inline double-slash comments (<code>//</code>).
+        <p>There are two levels of C-style comments; one for file headers and one for specific blocks of CSS.</p>
+
+        <h4>File header</h4>
+        <p>Only used at the very top of files. Every <code>.scss</code> file should open with one of these comments giving a title and an additional description if necessary.</p>
+        <pre>
+/* ==========================================================================
+   Buttons
+   ========================================================================== */</pre>
+
+        <h4>Block comment</h4>
+        <p>Used for individual blocks of CSS within the same file.</p>
+        <pre>
+/**
+ * Link button variant
+ */</pre>
+
+        <p>Block should have a title and then, if required, a description separated by one blank line (with an asterisk). Following CSS Guidelines, use footnotes to describe anything unusual or noteworthy in the accompanying block. Ensure that every line in these blocks has a full stop at the end.</p>
+        <pre>
+/**
+ * Standard button component
+ *
+ * 1. Line different size buttons up vertically.
+ * 2. Force all buttons to appear clickable
+ */
+
+.button {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle; // [1]
+  text-align: center;
+  cursor: pointer; // [2]
+}</pre>
+
+        <h4>Sass double-slash comments</h4>
+        <p>For any Sass-specific comments (which shouldn't be included in the compiled output) use double-slash quotes.</p>
+        <pre>
+// Component variables
+
+$button-padding-y: 1em !default;
+$button-padding-x: 4em !default;</pre>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
         <h2>Colors</h2>
 
         <div class="notes">These groups are organised (as named) into sub-maps of the <code>$global-colors</code> map to try and keep all color definitions together. To Access colors via the <code>color()</code> function passing the group and key. E.g. <code>color(brand, secondary)</code>.</div>

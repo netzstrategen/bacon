@@ -1,16 +1,19 @@
-//
-// Fieldset
-// --------------------------------------------------
+/* ==========================================================================
+   Fieldsets
+   ========================================================================== */
 
+
+// Component variables
 
 $fieldset-padding: 0.75em !default;
 $legend-padding-value: 0.25em !default;
 
 
-// To encourage the use of <fieldset> for accessibility,
-// default styling has been removed and abstracted to
-// this .fieldset class
-// --------------------------------------------------
+/**
+ * To encourage the use of `<fieldset>` for accessibility,
+ * default styling has been removed and abstracted to
+ * this `.fieldset` class.
+ */
 
 fieldset {
   padding: 0;
@@ -24,6 +27,6 @@ fieldset {
 
   legend {
     padding: 0 $legend-padding-value;
-    margin-left: -$legend-padding-value; // so it lines up with container content
+    margin-left: -$legend-padding-value; // So it lines up with container content
   }
 }
