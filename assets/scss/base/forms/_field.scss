@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Field group
+   ========================================================================== */
+
+
+// Component variables
+
+$field-spacing: $global-spacing-unit !default;
+
+
+/**
+ * Field group
+ * Wraps individual form inputs and their labels, helper text etc
+ */
+
+.field {
+  &:not(:last-child) {
+    margin-bottom: $field-spacing;
+  }
+}
