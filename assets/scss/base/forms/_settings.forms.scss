@@ -45,13 +45,3 @@ $input-shadow-focus: $input-shadow !default;
     box-shadow: $input-shadow-focus;
   }
 }
-
-
-@import
-  'fieldset',
-  'label',
-  'text',
-  'select',
-  'choice',
-  'help-text'
-;
