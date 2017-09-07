@@ -1,6 +1,9 @@
-//
-// px-to-rem font sizes with optional line-height
-// --------------------------------------------------
+/// px-to-rem font sizes with optional line-height.
+///
+/// @param {int} $font-size
+/// @param {string} $line-height ['normal']
+/// @param {bool} $important [false]
+/// ----------------------------------------------------------------------------
 
 @mixin font-size($font-size, $line-height: 'normal', $important: false) {
 

@@ -6,6 +6,11 @@
 
 @import 'settings/settings.core';
 
+/// Builds color blocks.
+///
+/// @param {int} $colors
+/// ----------------------------------------------------------------------------
+
 @mixin build-color-blocks($colors) {
   @for $i from 1 through length($colors) {
     $alias: nth(nth($colors, $i), 1);
