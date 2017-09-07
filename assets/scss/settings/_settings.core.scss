@@ -1,10 +1,9 @@
 //
 // Global settings
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 
 // Colours
-// --------------------------------------------------
 
 $global-colors: (
   brand: (
@@ -37,6 +36,7 @@ $global-colors: (
   )
 );
 
+
 /// Grabs colors from the map using `color(brand, secondary)` or `color(brand)`.
 ///
 /// @param {string} $palette
@@ -52,13 +52,11 @@ $global-colors: (
 
 
 // Document
-// --------------------------------------------------
 
 $body-bg: #fff;
 
 
 // Typography
-// --------------------------------------------------
 
 $global-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $alt-font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
@@ -80,12 +78,10 @@ $global-heading-weight: 600;
 
 
 // Spacing
-// --------------------------------------------------
 
 $global-spacing-unit: round($global-line-height);
 
 
 // Others
-// --------------------------------------------------
 
 $global-transition: 0.1s ease-in-out;

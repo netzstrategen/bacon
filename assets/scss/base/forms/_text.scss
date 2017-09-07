@@ -1,7 +1,13 @@
-//
-// Text inputs
-// --------------------------------------------------
+/* ==========================================================================
+   Text inputs
+   ========================================================================== */
 
+
+/**
+ * Standardised 'text box' inputs.
+ *
+ * 1. Receives standardised form input styling.
+ */
 
 [type='text'],
 [type='password'],
@@ -18,7 +24,7 @@
 [type='url'],
 [type='color'],
 textarea {
-  @include form-element;
+  @include form-element; // [1]
 }
 
 textarea {

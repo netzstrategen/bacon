@@ -1,15 +1,17 @@
-//
-// Choice inputs. Checkbox and radio
-// --------------------------------------------------
+/* ==========================================================================
+   Choice inputs. Checkbox and radio
+   ========================================================================== */
 
 
-$checkbox-external-spacing: 1em !default;
-$radio-spacing: $checkbox-external-spacing !default;
+// Component variables
+
+$checkbox-spacing: 1em !default;
+$radio-spacing: $checkbox-spacing !default;
 
 
-//
-// Shared
-// --------------------------------------------------
+/**
+ * Shared choice element styling.
+ */
 
 [type='checkbox'],
 [type='radio'] {
@@ -23,10 +25,11 @@ $radio-spacing: $checkbox-external-spacing !default;
 }
 
 
-//
-// Checkbox
-// Wrap <input> with <label class="checkbox">
-// --------------------------------------------------
+/**
+ * Checkbox input.
+ *
+ * Wrap `<input>` with `<label class="checkbox">`.
+ */
 
 .checkbox {
 
@@ -36,16 +39,18 @@ $radio-spacing: $checkbox-external-spacing !default;
     top: -1px;
   }
 
+  // Space consecutive checkboxes sensibly
   & + .checkbox {
-    margin-left: $checkbox-external-spacing;
+    margin-left: $checkbox-spacing;
   }
 }
 
 
-//
-// Radio button
-// Wrap <input> with <label class="radio">
-// --------------------------------------------------
+/**
+ * Radio button input.
+ *
+ * Wrap `<input>` with `<label class="radio">`.
+ */
 
 .radio {
 
@@ -55,7 +60,8 @@ $radio-spacing: $checkbox-external-spacing !default;
     top: -1px;
   }
 
+  // Space consecutive radio buttons sensibly
   & + .radio {
-    margin-left: $checkbox-external-spacing;
+    margin-left: $radio-spacing;
   }
 }

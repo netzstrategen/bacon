@@ -1,10 +1,11 @@
-//
-// Base HTML element styling
-// --------------------------------------------------
+/* ==========================================================================
+   Base HTML element styling
+   ========================================================================== */
 
 
-// Shared spacing for certain elements
-// --------------------------------------------------
+/**
+ * Shared spacing for certain elements.
+ */
 
 /* stylelint-disable selector-list-comma-newline-after */
 address,
@@ -20,8 +21,9 @@ fieldset {
 /* stylelint-enable selector-list-comma-newline-after */
 
 
-// Links
-// --------------------------------------------------
+/**
+ * Default link styling.
+ */
 
 a {
   // color: color(link);
@@ -36,26 +38,47 @@ a {
 }
 
 
-// Images
-// --------------------------------------------------
+/**
+ * Images.
+ *
+ * 1. Fluid images for responsive purposes.
+ * 2. Emphasise `alt` text if shown.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`.
+ *    elements. Safer alternative to using `display: block;`.
+ * 4. If an image has explicit dimensions set then don't make it responsive.
+ */
 
 img {
-  max-width: 100%;
-  font-style: italic;
-  vertical-align: middle;
+  max-width: 100%; // [1]
+  font-style: italic; // [2]
+  vertical-align: middle; // [3]
 }
 
 img[width],
 img[height] {
-  max-width: none;
+  max-width: none; // [4]
 }
 
 
-// Consistent indentation for lists
-// --------------------------------------------------
+/**
+ * Consistent indentation for lists.
+ *
+ * 1. Set a sensible browser default override.
+ */
 
 /* stylelint-disable selector-list-comma-newline-after */
 dd, ol, ul {
-  margin-left: $global-spacing-unit;
+  margin-left: $global-spacing-unit; // [1]
 }
 /* stylelint-enable selector-list-comma-newline-after */
+
+
+/**
+ * Tables.
+ *
+ * 1. Ensure tables fill up as much space as possible.
+ */
+
+table {
+  width: 100%; // [1]
+}
