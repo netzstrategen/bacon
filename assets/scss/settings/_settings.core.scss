@@ -1,10 +1,8 @@
-//
-// Global settings
-// -----------------------------------------------------------------------------
+/**
+ * Global settings.
+ */
 
-
-// Colours
-
+// Colors.
 $global-colors: (
   brand: (
     base: #1796e1,
@@ -36,7 +34,6 @@ $global-colors: (
   )
 );
 
-
 /// Grabs colors from the map using `color(brand, secondary)` or `color(brand)`.
 ///
 /// @param {string} $palette
@@ -50,14 +47,10 @@ $global-colors: (
   @return map-get(map-get($default, $palette), $tone);
 }
 
-
 // Document
-
 $body-bg: #fff;
 
-
 // Typography
-
 $global-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $alt-font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 
@@ -76,12 +69,8 @@ $global-line-height-h4: 27px;
 
 $global-heading-weight: 600;
 
-
 // Spacing
-
 $global-spacing-unit: round($global-line-height);
 
-
 // Others
-
 $global-transition: 0.1s ease-in-out;

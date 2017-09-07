@@ -1,9 +1,10 @@
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
-
-
-// Component variables
+/**
+ * Standard button component.
+ *
+ * 1. Line different size buttons up vertically.
+ * 2. Force all buttons to appear clickable.
+ * 3. Force buttons to inherit font styles (particularly relevant for form inputs).
+ */
 
 $button-padding-y: 1em !default;
 $button-padding-x: 4em !default;
@@ -14,15 +15,6 @@ $button-border-radius: 2px !default;
 $button-small-text: 0.75rem !default;
 $button-small-padding-y: 1em !default;
 $button-small-padding-x: 1.5em !default;
-
-
-/**
- * Standard button component.
- *
- * 1. Line different size buttons up vertically.
- * 2. Force all buttons to appear clickable.
- * 3. Force buttons to inherit font styles (particularly relevant for form inputs).
- */
 
 // * @define button; weak */
 .button {
@@ -39,7 +31,6 @@ $button-small-padding-x: 1.5em !default;
   font-weight: 600;
   color: #fff;
   text-transform: uppercase;
-  // transition: background $global-transition, color $global-transition;
   text-decoration: none;
 
   @include hocus {
@@ -60,7 +51,6 @@ $button-small-padding-x: 1.5em !default;
   // stylelint-enable plugin/selector-bem-pattern
 }
 
-
 /**
  * Small button variant.
  */
@@ -70,7 +60,6 @@ $button-small-padding-x: 1.5em !default;
   font-size: $button-small-text;
 }
 
-
 /**
  * Full-width button variant.
  */
@@ -78,7 +67,6 @@ $button-small-padding-x: 1.5em !default;
 .button--full {
   display: block;
 }
-
 
 /**
  * Primary brand button variant.
@@ -95,7 +83,6 @@ $button-small-padding-x: 1.5em !default;
     background-color: color(brand, tertiary);
   }
 }
-
 
 /**
  * Hollow button variant.
@@ -124,7 +111,6 @@ $button-small-padding-x: 1.5em !default;
     background-color: transparent;
   }
 }
-
 
 /**
  * Link button variant.

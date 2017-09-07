@@ -1,7 +1,6 @@
-/* ==========================================================================
-   Reset on top of normalize
-   ========================================================================== */
-
+/**
+ * Reset on top of normalize.
+ */
 
 /**
  * Remove all intrusive padding and margin browser defaults.
@@ -20,20 +19,16 @@ fieldset, legend {
 }
 /* stylelint-enable selector-list-comma-newline-after */
 
-
 /**
  * Remove trailing margins from nested lists.
  */
 
 li > {
-
   ol,
   ul {
     margin-bottom: 0;
   }
-
 }
-
 
 /**
  * Remove default table spacing.

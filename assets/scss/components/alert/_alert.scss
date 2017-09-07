@@ -1,9 +1,6 @@
-/* ==========================================================================
-   Alert messages
-   ========================================================================== */
-
-
-// Component variables
+/**
+ * Alert messages.
+ */
 
 $alert-padding: 1em !default;
 $alert-border-width: 1px !default;
@@ -22,7 +19,6 @@ $alert-error-bg: color(notifications, error) !default;
 $alert-error-color: darken(color(notifications, error), 20%) !default;
 $alert-error-border: transparent !default;
 
-
 /**
  * Alert message box.
  */
@@ -36,7 +32,6 @@ $alert-error-border: transparent !default;
   color: $alert-default-color;
 }
 
-
 /**
  * Warning alert variant.
  */
@@ -47,7 +42,6 @@ $alert-error-border: transparent !default;
   color: $alert-warning-color;
 }
 
-
 /**
  * Success alert variant.
  */
@@ -57,7 +51,6 @@ $alert-error-border: transparent !default;
   background-color: $alert-success-bg;
   color: $alert-success-color;
 }
-
 
 /**
  * Error alert variant.
