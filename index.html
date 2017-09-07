@@ -6,8 +6,8 @@
     <title>Bacon</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="dist/css/bacon.css">
-    <link rel="stylesheet" href="dist/css/docs.css">
+    <link rel="stylesheet" href="../dist/bacon.css">
+    <link rel="stylesheet" href="../dist/docs.css">
   </head>
   <body>
 
@@ -133,11 +133,11 @@ $button-padding-x: 4em !default;</pre>
     <section class="section">
       <div class="container">
 
-        <h2>Colors</h2>
+        <h2 class="docs-heading">Colors</h2>
 
         <div class="notes">These groups are organised (as named) into sub-maps of the <code>$global-colors</code> map to try and keep all color definitions together. To Access colors via the <code>color()</code> function passing the group and key. E.g. <code>color(brand, secondary)</code>.</div>
 
-        <h3>Brand</h3>
+        <h3 class="docs-heading">Brand</h3>
         <ul class="color-blocks color-blocks--brand">
           <li><strong>base</strong></li>
           <li><strong>secondary</strong></li>
@@ -145,7 +145,7 @@ $button-padding-x: 4em !default;</pre>
           <li><strong>accent</strong></li>
         </ul>
 
-        <h3>Greyscale</h3>
+        <h3 class="docs-heading">Greyscale</h3>
         <ul class="color-blocks color-blocks--grayscale">
           <li><strong>base</strong></li>
           <li><strong>dark</strong></li>
@@ -160,28 +160,28 @@ $button-padding-x: 4em !default;</pre>
     <section class="section">
       <div class="container">
 
-        <h2>Buttons</h2>
+        <h2 class="docs-heading">Buttons</h2>
 
         <div class="notes"><code>.button</code> gives you the basic greyscale button and then use the modifier classes to change colors and sizes.</div>
 
-        <h3>Button <code>.button</code></h3>
+        <h3 class="docs-heading">Button <code>.button</code></h3>
         <a class="button" href="">Button</a>
         <a class="button" href="" disabled>Disabled</a>
 
-        <h3>Primary <code>.button--primary</code></h3>
+        <h3 class="docs-heading">Primary <code>.button--primary</code></h3>
         <a class="button button--primary" href="">Primary</a>
 
-        <h3>Hollow <code>.button--hollow</code></h3>
+        <h3 class="docs-heading">Hollow <code>.button--hollow</code></h3>
         <a class="button button--hollow" href="">Hollow</a>
         <a class="button button--hollow" href="" disabled>Disabled</a>
 
-        <h3>Link button <code>.button--link</code></h3>
+        <h3 class="docs-heading">Link button <code>.button--link</code></h3>
         <a class="button button--link" href="">Link button</a>
 
-        <h3>Small <code>.button--small</code></h3>
+        <h3 class="docs-heading">Small <code>.button--small</code></h3>
         <a class="button button--small" href="">Small</a>
 
-        <h3>Full width <code>.button--full</code></h3>
+        <h3 class="docs-heading">Full width <code>.button--full</code></h3>
         <a class="button button--full" href="">Full width</a>
 
       </div>
@@ -190,26 +190,26 @@ $button-padding-x: 4em !default;</pre>
     <section class="section">
       <div class="container">
 
-        <h2>Form elements</h2>
+        <h2 class="docs-heading">Form elements</h2>
 
-        <h3>Fieldset <code>.fieldset</code></h3>
+        <h3 class="docs-heading">Fieldset <code>.fieldset</code></h3>
         <div class="notes">To encourage the use of <code>&lt;fieldset&gt;</code> for accessibility, default styling has been removed and abstracted to the <code>.fieldset</code> class.</div>
         <fieldset class="fieldset">
           <legend>Fieldset</legend>
         </fieldset>
 
-        <h3>Label</h3>
+        <h3 class="docs-heading">Label</h3>
         <label>Label for input</label>
 
-        <h3>Text inputs</h3>
+        <h3 class="docs-heading">Text inputs</h3>
         <label>Input label:</label>
         <input type="text" placeholder="Enter some text...">
 
-        <h3>Textarea</h3>
+        <h3 class="docs-heading">Textarea</h3>
         <label>Textarea label:</label>
         <textarea placeholder="Textarea for more text"></textarea>
 
-        <h3>Select</h3>
+        <h3 class="docs-heading">Select</h3>
         <label>Select label:</label>
         <select>
           <option disabled selected>Kategorien...</option>
@@ -300,18 +300,18 @@ $button-padding-x: 4em !default;</pre>
     <section class="section">
       <div class="container">
 
-        <h2>Alert messages</h2>
+        <h2 class="docs-heading">Alert messages</h2>
 
-        <h3>Alert <code>.alert</code></h3>
+        <h3 class="docs-heading">Alert <code>.alert</code></h3>
         <div class="alert">This is a regular notification message.</div>
 
-        <h3>Warning <code>.alert--warning</code></h3>
+        <h3 class="docs-heading">Warning <code>.alert--warning</code></h3>
         <div class="alert alert--warning">This is a warning message.</div>
 
-        <h3>Success <code>.alert--success</code></h3>
+        <h3 class="docs-heading">Success <code>.alert--success</code></h3>
         <div class="alert alert--success">This is a success message.</div>
 
-        <h3>Error <code>.alert--error</code></h3>
+        <h3 class="docs-heading">Error <code>.alert--error</code></h3>
         <div class="alert alert--error">This is an error message.</div>
 
       </div>
@@ -320,9 +320,9 @@ $button-padding-x: 4em !default;</pre>
     <section class="section">
       <div class="container">
 
-      <h2>Tags</h2>
+      <h2 class="docs-heading">Tags</h2>
 
-      <h3>Tag <code>.tag</code></h3>
+      <h3 class="docs-heading">Tag <code>.tag</code></h3>
       <p><span class="tag">.tag</span></p>
       <p><span class="tag tag--white">.tag--white</span></p>
       <p><span class="tag tag--black">.tag--black</span></p>
@@ -336,7 +336,7 @@ $button-padding-x: 4em !default;</pre>
       <p><span class="tag tag--success">.tag--success</span></p>
       <p><span class="tag tag--error">.tag--error</span></p>
 
-      <h3>Tags list <code>.tags</code></h3>
+      <h3 class="docs-heading">Tags list <code>.tags</code></h3>
       <div class="notes">To group tags together with appropriate spacing, wrap in <code>.tags</code>.</div>
       <div class="tags">
         <span class="tag">Eins</span>
