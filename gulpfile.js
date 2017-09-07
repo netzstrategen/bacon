@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
+const sassdoc = require('sassdoc');
 const sourcemaps = require('gulp-sourcemaps');
 const stylelint = require('gulp-stylelint');
 
@@ -27,7 +28,12 @@ gulp.task('scss', function () {
     .pipe(gulp.dest(paths.dist));
 });
 
-// gulp.task('clean', require('del').bind(null, paths.dist));
+gulp.task('sassdoc', function () {
+  return gulp.src(paths.scss)
+    .pipe(sassdoc());
+});
+
+gulp.task('clean-dist', require('del').bind(null, paths.dist));
 
 gulp.task('default', ['scss'], function () {
   gulp.watch(paths.scss, ['scss']);
