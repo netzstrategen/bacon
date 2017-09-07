@@ -219,38 +219,80 @@ $button-padding-x: 4em !default;</pre>
           <option>Anzeigen</option>
         </select>
 
-        <h3>Checkboxes <code>label.checkbox</code></h3>
-        <div class="notes">Always wrap <code>&lt;input type="checkbox"&gt;</code> in a <code>&lt;label&gt;</code> tag. This binds the label to the input without the need for the <code>for="id"</code> attribute meaning that the input can be reused if needed.</div>
-        <label class="checkbox">
+        <h3 class="docs-heading">Choice inputs: checkboxes and radios</h3>
+
+        <div class="notes">Checkboxes and radios share styles via the <code>.choice-input</code> class (and child classes). They are then modified using their own <code>.checkbox</code> and <code>.radio</code> classes.<br><br>Always wrap the <code>&lt;input&gt;</code> and sibling elements in a <code>&lt;label&gt;</code> because the <code>:checked</code> attribute is combined with an adjacent sibling selector to style the indicator box/circle.</div>
+
+        <h4 class="docs-heading">Checkboxes <code>label.checkbox</code></h4>
+        <label class="checkbox choice-input">
           <input type="checkbox">
-          Checkbox one
-        </label>
-        <label class="checkbox">
-          <input type="checkbox">
-          Checkbox two
-        </label>
-        <label class="checkbox">
-          <input type="checkbox">
-          Checkbox three
+          <span class="choice-input__indicator checkbox__indicator"></span>
+          <span class="choice-input__label">Checkbox one</span>
         </label>
 
-        <h3>Radios <code>label.radio</code></h3>
-        <label class="radio">
-          <input type="radio" name="radio">
-          Radio one
-        </label>
-        <label class="radio">
-          <input type="radio" name="radio">
-          Radio two
-        </label>
-        <label class="radio">
-          <input type="radio" name="radio">
-          Radio three
+        <h4 class="docs-heading">Radios <code>label.radio</code></h4>
+        <label class="radio choice-input">
+          <input type="radio">
+          <span class="choice-input__indicator radio__indicator"></span>
+          <span class="choice-input__label">Radio one</span>
         </label>
 
-        <h3>Helper text <code>.help-text</code></h3>
+        <div class="notes">To inline several checkboxes or radios, wrap them with <code>.choice-inputs</code>.</div>
+
+        <div class="choice-inputs">
+          <label class="checkbox choice-input">
+            <input type="checkbox" name="checkbox">
+            <span class="choice-input__indicator checkbox__indicator"></span>
+            <span class="choice-input__label">Checkbox one</span>
+          </label>
+          <label class="checkbox choice-input">
+            <input type="checkbox" name="checkbox">
+            <span class="choice-input__indicator checkbox__indicator"></span>
+            <span class="choice-input__label">Checkbox two</span>
+          </label>
+        </div>
+        <br>
+        <div class="choice-inputs">
+          <label class="radio choice-input">
+            <input type="radio" name="radio">
+            <span class="choice-input__indicator radio__indicator"></span>
+            <span class="choice-input__label">Radio one</span>
+          </label>
+          <label class="radio choice-input">
+            <input type="radio" name="radio">
+            <span class="choice-input__indicator radio__indicator"></span>
+            <span class="choice-input__label">Radio two</span>
+          </label>
+        </div>
+
+        <h3 class="docs-heading">Helper text <code>.help-text</code></h3>
         <input type="password" placeholder="Enter a password">
         <p class="help-text">Your password must be at least eight characters long and contain at least one number.</p>
+
+
+        <h3 class="docs-heading">Field group <code>.field</code></h3>
+
+        <div class="notes">Wrap inputs with their labels, helper text etc for consistent spacing.</div>
+
+        <form>
+          <div class="field">
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name">
+          </div>
+          <div class="field">
+            <label>Password:</label>
+            <input type="password" placeholder="Enter your password">
+            <p class="help-text">Your password must be at least eight characters long and contain at least one number.</p>
+          </div>
+          <div class="field">
+            <label class="checkbox choice-input">
+            <input type="checkbox" name="checkbox">
+            <span class="choice-input__indicator checkbox__indicator"></span>
+            <span class="choice-input__label">Tick this box to receive penguins.</span>
+          </label>
+          </div>
+          <button class="button button--primary">Login</button>
+        </form>
 
       </div>
     </section>

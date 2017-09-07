@@ -5,7 +5,7 @@
 
 // Component variables
 
-$label-margin: 0 !default;
+$label-spacing: 0 0 2px !default;
 
 $label-font-size: 1rem !default;
 $label-font-weight: 400 !default;
@@ -17,9 +17,10 @@ $label-color: color(grayscale, dark) !default;
  * Form input label.
  */
 
-label {
+label,
+.label {
   display: block;
-  margin: $label-margin;
+  margin: $label-spacing;
   font-size: $label-font-size;
   font-weight: $label-font-weight;
   line-height: $label-line-height;
