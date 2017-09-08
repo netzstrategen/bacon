@@ -6,7 +6,7 @@
   "homepage": "http://www.netzstrategen.com",
   "bugs": "https://github.com/netzstrategen/bacon/issues",
   "author": "netzstrategen <hallo@netzstrategen.com>",
-  "main": "assets/scss/bacon.scss",
+  "main": "src/bacon.scss",
   "repository": {
     "type": "git",
     "url": "https://github.com/netzstrategen/bacon.git"
@@ -19,6 +19,7 @@
     "gulp": "~3.9.1",
     "gulp-autoprefixer": "~4.0.0",
     "gulp-clean-css": "^3.7.0",
+    "gulp-if": "^2.0.2",
     "gulp-plumber": "~1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
