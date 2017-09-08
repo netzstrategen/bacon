@@ -1,6 +1,6 @@
 {
   "name": "@netzstrategen/bacon",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "title": "Bacon",
   "description": "netzstrategen baseline CSS framework",
   "homepage": "http://www.netzstrategen.com",
@@ -27,6 +27,7 @@
     "gulp-sourcemaps": "~2.6.0",
     "gulp-stylelint": "~3.9.0",
     "sassdoc": "^2.3.0",
+    "sass-module-importer": "^1.4.0",
     "stylelint": "~7.13.0",
     "stylelint-order": "~0.5.0",
     "stylelint-scss": "~1.5.1",
