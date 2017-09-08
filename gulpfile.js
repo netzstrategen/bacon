@@ -8,6 +8,7 @@ const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const sassdoc = require('sassdoc');
+const sassModuleImporter = require('sass-module-importer');
 const sourcemaps = require('gulp-sourcemaps');
 const stylelint = require('gulp-stylelint');
 
@@ -38,7 +39,10 @@ const cssTasks = function(filename, options = { outputStyle: 'nested', sourcemap
       }]
     }))
     .pipe(gulpif(options.sourcemaps, sourcemaps.init()))
-    .pipe(sass({ outputStyle: options.outputStyle }).on('error', sass.logError))
+    .pipe(sass({
+      importer: sassModuleImporter(),
+      outputStyle: options.outputStyle
+    }).on('error', sass.logError))
     .pipe(autoprefixer(pkg.browserslist))
     .pipe(gulpif(options.sourcemaps, sourcemaps.write()))
     .pipe(gulpif(options.production, replace(copyrightPlaceholder, copyrightNotice)))

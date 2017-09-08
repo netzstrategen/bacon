@@ -39,5 +39,8 @@
     "android 2.3",
     "android 4",
     "opera 12"
-  ]
+  ],
+  "dependencies": {
+    "sass-module-importer": "^1.4.0"
+  }
 }
