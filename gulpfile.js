@@ -1,6 +1,7 @@
-const gulp = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCss = require('gulp-clean-css');
+const gulp = require('gulp');
+const gulpif = require('gulp-if');
 const pkg = require('./package.json');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
@@ -11,8 +12,10 @@ const sourcemaps = require('gulp-sourcemaps');
 const stylelint = require('gulp-stylelint');
 
 const paths = {
-  scss: ['./assets/scss/**/*.scss', '!./assets/scss/**/vendor/*.scss'],
-  dist: './dist/css'
+  src: './src/**/*.scss',
+  bacon: './src/bacon.scss',
+  docs: './docs/docs.scss',
+  dist: './dist',
 };
 
 const copyrightPlaceholder = '/*! #copyright DO NOT REMOVE# */';
@@ -24,8 +27,8 @@ const copyrightNotice = ['/*!',
   ' */',
   ''].join('\n');
 
-gulp.task('scss', function () {
-  return gulp.src(paths.scss)
+const cssTasks = function(filename, options = { outputStyle: 'nested', sourcemaps: true, production: false }) {
+  return gulp.src(filename)
     .pipe(plumber())
     .pipe(stylelint({
       syntax: 'scss',
@@ -34,35 +37,37 @@ gulp.task('scss', function () {
         console: true
       }]
     }))
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(gulpif(options.sourcemaps, sourcemaps.init()))
+    .pipe(sass({ outputStyle: options.outputStyle }).on('error', sass.logError))
     .pipe(autoprefixer(pkg.browserslist))
-    .pipe(sourcemaps.write())
+    .pipe(gulpif(options.sourcemaps, sourcemaps.write()))
+    .pipe(gulpif(options.production, replace(copyrightPlaceholder, copyrightNotice)))
+    .pipe(gulpif(options.production, cleanCss()))
+    .pipe(gulpif(options.production, rename({ suffix: '.min' })))
     .pipe(gulp.dest(paths.dist));
+};
+
+gulp.task('css', function () {
+  cssTasks(paths.bacon);
 });
 
-gulp.task('prod-scss', function () {
-  return gulp.src(paths.scss)
-    .pipe(plumber())
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(autoprefixer(pkg.browserslist))
-    .pipe(replace(copyrightPlaceholder, copyrightNotice))
-    .pipe(cleanCss())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest(paths.dist));
+gulp.task('production-css', function () {
+  cssTasks(paths.bacon, { outputStyle: 'compressed', sourcemaps: false, production: true });
+});
+
+gulp.task('docs', function () {
+  cssTasks([paths.bacon, paths.docs]);
 });
 
 gulp.task('sassdoc', function () {
-  return gulp.src(paths.scss)
+  return gulp.src(paths.src)
     .pipe(sassdoc());
 });
 
 gulp.task('clean-dist', require('del').bind(null, paths.dist));
 
-gulp.task('default', ['scss'], function () {
-  gulp.watch(paths.scss, ['scss']);
+gulp.task('default', ['css'], function () {
+  gulp.watch(paths.bacon, ['css']);
 });
 
 module.exports = gulp; // Export the Gulp instance for use in Fractal CLI
