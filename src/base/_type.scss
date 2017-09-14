@@ -46,3 +46,15 @@ h4,
 %h4 {
   @include font-size($global-font-size-h4, $global-line-height-h4);
 }
+
+
+/**
+ * Horizontal rules.
+ */
+
+hr {
+  height: $hr-thickness;
+  margin: $hr-spacing;
+  border: 0;
+  background-color: $hr-bg;
+}
