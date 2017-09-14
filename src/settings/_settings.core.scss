@@ -5,7 +5,8 @@
 
 // Colours
 
-$global-colors: (
+$global-colors: () !default;
+$global-colors: map-merge((
   brand: (
     base: #1796e1,
     secondary: #1bb2fe,
@@ -34,7 +35,7 @@ $global-colors: (
     success: #8df0bb,
     error: #fec9c8
   )
-);
+), $global-colors);
 
 
 /// Grabs colors from the map using `color(brand, secondary)` or `color(brand)`.
@@ -53,28 +54,28 @@ $global-colors: (
 
 // Document
 
-$body-bg: #fff;
+$body-bg: #fff !default;
 
 
 // Typography
 
-$global-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-$alt-font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$global-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
+$alt-font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif !default;
 
-$global-font-size: 16px;
-$global-line-height: 28px;
-$global-font-weight: 400;
+$global-font-size: 16px !default;
+$global-line-height: 28px !default;
+$global-font-weight: 400 !default;
 
-$global-font-size-h1: 32px;
-$global-line-height-h1: 48px;
-$global-font-size-h2: 24px;
-$global-line-height-h2: 36px;
-$global-font-size-h3: 20px;
-$global-line-height-h3: 30px;
-$global-font-size-h4: 18px;
-$global-line-height-h4: 27px;
+$global-font-size-h1: 32px !default;
+$global-line-height-h1: 48px !default;
+$global-font-size-h2: 24px !default;
+$global-line-height-h2: 36px !default;
+$global-font-size-h3: 20px !default;
+$global-line-height-h3: 30px !default;
+$global-font-size-h4: 18px !default;
+$global-line-height-h4: 27px !default;
 
-$global-heading-weight: 600;
+$global-heading-weight: 600 !default;
 
 $hr-thickness: 1px !default;
 $hr-spacing: 1.5em 0 !default;
@@ -83,9 +84,9 @@ $hr-bg: lighten(color(grayscale), 59%) !default;
 
 // Spacing
 
-$global-spacing-unit: round($global-line-height);
+$global-spacing-unit: round($global-line-height) !default;
 
 
 // Others
 
-$global-transition: 0.1s ease-in-out;
+$global-transition: 0.1s ease-in-out !default;
