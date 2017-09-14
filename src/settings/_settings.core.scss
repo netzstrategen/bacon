@@ -76,6 +76,10 @@ $global-line-height-h4: 27px;
 
 $global-heading-weight: 600;
 
+$hr-thickness: 1px !default;
+$hr-spacing: 1.5em 0 !default;
+$hr-bg: lighten(color(grayscale), 59%) !default;
+
 
 // Spacing
 
