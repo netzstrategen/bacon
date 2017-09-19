@@ -90,3 +90,18 @@ $global-spacing-unit: round($global-line-height) !default;
 // Others
 
 $global-transition: 0.1s ease-in-out !default;
+
+
+// Sass-mq settings
+
+$mq-base-font-size: $global-font-size;
+
+$global-breakpoints: () !default;
+$global-breakpoints: map-merge((
+  xs: 400px,
+  s: 600px,
+  m: 900px,
+  l: 1024px,
+  xl: 1200px
+), $global-breakpoints);
+$mq-breakpoints: $global-breakpoints;
