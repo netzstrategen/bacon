@@ -8,13 +8,13 @@ $link-active-color: color(link, active) !default;
 
 
 a {
-  // color: color(link);
+  color: $link-color;
 
   @include hocus {
-    color: color(link, hocus);
+    color: $link-hocus-color;
   }
 
   &:active {
-    color: color(link, active);
+    color: $link-active-color;
   }
 }
