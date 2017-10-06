@@ -28,6 +28,14 @@ const copyrightNotice = ['/*!',
   ' */',
   ''].join('\n');
 
+const cleanCssOptions = {
+  level: {
+    2: {
+      all: true
+    }
+  }
+};
+
 const cssTasks = function(filename, options = { outputStyle: 'nested', sourcemaps: true, production: false }) {
   return gulp.src(filename)
     .pipe(plumber())
@@ -46,7 +54,7 @@ const cssTasks = function(filename, options = { outputStyle: 'nested', sourcemap
     .pipe(autoprefixer(pkg.browserslist))
     .pipe(gulpif(options.sourcemaps, sourcemaps.write()))
     .pipe(gulpif(options.production, replace(copyrightPlaceholder, copyrightNotice)))
-    .pipe(gulpif(options.production, cleanCss()))
+    .pipe(gulpif(options.production, cleanCss(cleanCssOptions)))
     .pipe(gulpif(options.production, rename({ suffix: '.min' })))
     .pipe(gulp.dest(paths.dist));
 };
@@ -71,7 +79,7 @@ gulp.task('sassdoc', function () {
 gulp.task('clean-dist', require('del').bind(null, paths.dist));
 
 gulp.task('default', ['css'], function () {
-  gulp.watch(paths.bacon, ['css']);
+  gulp.watch(paths.src, ['css']);
 });
 
 module.exports = gulp; // Export the Gulp instance for use in Fractal CLI
