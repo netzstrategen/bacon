@@ -1,19 +1,12 @@
-/* ==========================================================================
-   Choice inputs: checkbox and radio
-   ========================================================================== */
-
-
-// Component variables
-
-$choice-spacing: 1em !default;
-
-
 /**
  * Shared choice input styling.
  *
  * 1. Flex item but with a fixed size
  * 2. Make the input proportionally bigger than it's parent font-size
  */
+
+$choice-spacing: 1em !default;
+
 
 .choice-input {
   display: flex;
@@ -102,7 +95,11 @@ $choice-spacing: 1em !default;
 /**
  * Radio button input.
  *
- * Wrap `<input>` with `<label class="radio">`.
+ * <label class="radio choice-input">
+ *   <input type="radio">
+ *   <span class="choice-input__indicator radio__indicator"></span>
+ *   <span class="choice-input__label">Checkbox</span>
+ * </label>
  */
 
 .radio {

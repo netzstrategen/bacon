@@ -1,17 +1,10 @@
-/* ==========================================================================
-   Media object. The original and best.
-   Further: https://philipwalton.github.io/solved-by-flexbox/demos/media-object/
-   ========================================================================== */
-
-
-// Component variables
+/**
+ * Media object. The original and best.
+ * Further: https://philipwalton.github.io/solved-by-flexbox/demos/media-object/
+ */
 
 $media-object-spacing: $global-spacing-unit !default;
 
-
-/**
- * Base media object
- */
 
 .media {
   display: flex;
