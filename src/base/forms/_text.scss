@@ -25,6 +25,10 @@ textarea {
 textarea {
   max-width: 100%;
 
+  &:not([rows]) {
+    min-height: 120px;
+  }
+
   &[rows] {
     height: auto;
   }
