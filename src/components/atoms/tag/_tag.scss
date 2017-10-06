@@ -1,9 +1,7 @@
-/* ==========================================================================
-   Tags: used for lists (categories) or as indicators
-   ========================================================================== */
-
-
-// Component variables
+/**
+ * Tag badge.
+ * Used for lists (categories) or as indicators.
+ */
 
 $tag-height: 2em !default;
 $tag-padding-x: 0.75em !default;
@@ -12,10 +10,6 @@ $tag-font-size: 0.75rem !default;
 
 $tags-space: 0.5em !default;
 
-
-/**
- * Tag badge.
- */
 
 // * @define tag; weak */
 .tag {

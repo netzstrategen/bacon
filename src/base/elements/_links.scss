@@ -1,11 +1,11 @@
-/* ==========================================================================
-   Base link styling
-   ========================================================================== */
-
-
 /**
- * Default link styling.
+ * Base link styling.
  */
+
+$link-color: color(link) !default;
+$link-hocus-color: color(link, hocus) !default;
+$link-active-color: color(link, active) !default;
+
 
 a {
   // color: color(link);

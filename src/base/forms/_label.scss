@@ -1,9 +1,6 @@
-/* ==========================================================================
-   Labels
-   ========================================================================== */
-
-
-// Component variables
+/**
+ * Form input label.
+ */
 
 $label-spacing: 0 0 2px !default;
 
@@ -12,10 +9,6 @@ $label-font-weight: 400 !default;
 $label-line-height: 1.5 !default;
 $label-color: color(grayscale, dark) !default;
 
-
-/**
- * Form input label.
- */
 
 label,
 .label {
