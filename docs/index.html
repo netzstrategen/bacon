@@ -13,19 +13,19 @@
 
     <header class="docs-header">
       <div class="container">
-        <h1>Bacon styleguide</h1>
+        <h1 class="docs-heading">Bacon styleguide</h1>
       </div>
     </header>
 
     <section class="section">
       <div class="container">
 
-        <h2>Coding style</h2>
+        <h2 class="docs-heading">Coding style</h2>
 
-        <h3>Variables</h3>
+        <h3 class="docs-heading">Variables</h3>
         <p>All global settings for typography, document, colour palette etc are stored in <code>settings/_settings.core.scss</code>. Component-specific settings should be set at the top of that component's file.</p>
 
-        <h4>Colour palette</h4>
+        <h4 class="docs-heading">Colour palette</h4>
         <p>The global colour palette is contained within a Sass map called <code>$global-colors</code>. Colours within this map are grouped together according to their usage or subject. Each new colour group must, at a minimum, have a <code>base</code> colour entry. You can then add as many others as you wish.</p>
         <pre>
 $global-colors: (
@@ -55,7 +55,7 @@ $global-colors: (
           </ul>
         </div>
 
-        <h3>Whitespace</h3>
+        <h3 class="docs-heading">Whitespace</h3>
         <p>Bacon is liberal with whitespace to aid readability. The general rule is two blank lines between blocks and one blank line inside blocks.</p>
         <pre>
 /* ==========================================================================
@@ -84,18 +84,18 @@ $button-padding-x: 4em !default;
 }</pre>
         <p>It is important to follow these guidelines to ensure document flow but always prefer to put in one blank line too many than one too few should you be unsure.</p>
 
-        <h3>Commenting</h3>
+        <h3 class="docs-heading">Commenting</h3>
         <p>Bacon follows the commenting style outlined in Harry Roberts' <a href="https://cssguidelin.es" target="_blank">CSS Guidelines</a> plus a couple of Sass-y additions. Broadly, use C-style comment blocks to document code and for anything Sass-related, use inline double-slash comments (<code>//</code>).
         <p>There are two levels of C-style comments; one for file headers and one for specific blocks of CSS.</p>
 
-        <h4>File header</h4>
+        <h4 class="docs-heading">File header</h4>
         <p>Only used at the very top of files. Every <code>.scss</code> file should open with one of these comments giving a title and an additional description if necessary.</p>
         <pre>
 /* ==========================================================================
    Buttons
    ========================================================================== */</pre>
 
-        <h4>Block comment</h4>
+        <h4 class="docs-heading">Block comment</h4>
         <p>Used for individual blocks of CSS within the same file.</p>
         <pre>
 /**
@@ -119,7 +119,7 @@ $button-padding-x: 4em !default;
   cursor: pointer; // [2]
 }</pre>
 
-        <h4>Sass double-slash comments</h4>
+        <h4 class="docs-heading">Sass double-slash comments</h4>
         <p>For any Sass-specific comments (which shouldn't be included in the compiled output) use double-slash quotes.</p>
         <pre>
 // Component variables
