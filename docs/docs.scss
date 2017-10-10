@@ -74,6 +74,8 @@ pre {
 
 .container {
   max-width: 800px;
+  padding-right: $global-spacing-unit / 2;
+  padding-left: $global-spacing-unit / 2;
   margin: 0 auto;
 }
 
