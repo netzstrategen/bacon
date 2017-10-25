@@ -9,3 +9,13 @@ dd, ol, ul {
   margin-left: $global-spacing-unit; // [1]
 }
 /* stylelint-enable selector-list-comma-newline-after */
+
+
+/**
+ * Stacked list with default styling (such as bullets) removed.
+ */
+
+.list-unstyled {
+  margin-left: 0;
+  list-style: none;
+}
