@@ -6,16 +6,16 @@
 $media-object-spacing: $global-spacing-unit !default;
 
 
-.media {
+.o-media {
   display: flex;
   align-items: flex-start;
 }
 
-.media__figure {
+.o-media__figure {
   margin-right: $media-object-spacing;
 }
 
-.media__body {
+.o-media__body {
   flex: 1;
 }
 
@@ -24,10 +24,10 @@ $media-object-spacing: $global-spacing-unit !default;
  * Reverse media object (image on right)
  */
 
-.media--rev {
+.o-media--rev {
   align-items: flex-end;
 
-  .media__figure {
+  .o-media__figure {
     margin-right: 0;
     margin-left: $media-object-spacing;
   }
