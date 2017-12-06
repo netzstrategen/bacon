@@ -11,15 +11,18 @@
     @if (unit($font-size) != "px") {
       @error "`#{$font-size}` needs to be a pixel value.";
     }
-  } @else {
+  }
+  @else {
     @error "`#{$font-size}` needs to be a number.";
   }
 
   @if ($important == true) {
     $important: !important;
-  } @else if ($important == false) {
+  }
+  @else if ($important == false) {
     $important: null;
-  } @else {
+  }
+  @else {
     @error "`#{$important}` needs to be `true` or `false`.";
   }
 
@@ -29,7 +32,8 @@
     @if (unit($line-height) == "px") {
       $line-height: $line-height / $font-size;
     }
-  } @else if not($line-height == 'inherit' or $line-height == 'normal') {
+  }
+  @else if not($line-height == 'inherit' or $line-height == 'normal') {
     @error "`#{$line-height}` is not a valid value for `$line-height`.";
   }
 
