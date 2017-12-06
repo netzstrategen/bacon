@@ -25,12 +25,13 @@
 
   font-size: ($font-size / $global-font-size) * 1rem $important;
 
-  @if (type-of($line-height) == number or $line-height == 'inherit' or $line-height == 'normal') {
-
+  @if (type-of($line-height) == number) {
     @if (unit($line-height) == "px") {
       $line-height: $line-height / $font-size;
     }
-
-    line-height: $line-height $important;
+  } @else if not($line-height == 'inherit' or $line-height == 'normal') {
+    @error "`#{$line-height}` is not a valid value for `$line-height`.";
   }
+
+  line-height: $line-height $important;
 }
