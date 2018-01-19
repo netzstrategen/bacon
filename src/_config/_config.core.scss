@@ -5,8 +5,7 @@
 
 // Colours
 
-$global-colors: () !default;
-$global-colors: map-merge((
+$global-colors: (
   brand: (
     base: #1796e1,
     secondary: #1bb2fe,
@@ -35,7 +34,7 @@ $global-colors: map-merge((
     success: #8df0bb,
     error: #fec9c8
   )
-), $global-colors);
+) !default;
 
 
 /// Grabs colors from the map using `color(brand, secondary)` or `color(brand)`.
