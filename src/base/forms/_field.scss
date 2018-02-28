@@ -6,7 +6,8 @@
 $field-spacing: $global-spacing-unit !default;
 
 
-.field {
+.field,
+%field {
   &:not(:last-child) {
     margin-bottom: $field-spacing;
   }
