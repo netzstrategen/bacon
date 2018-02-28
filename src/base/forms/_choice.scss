@@ -45,10 +45,15 @@ $choice-spacing: 1em !default;
 .choice-inputs {
   display: flex;
 
-  .choice-input {
+  &:not(.choice-inputs--stacked) .choice-input:not(:last-child) {
+    margin-right: 2 * $choice-spacing;
+  }
 
-    &:not(:last-child) {
-      margin-right: 2 * $choice-spacing;
+  &--stacked {
+    flex-direction: column;
+
+    .choice-input:not(:last-child) {
+      margin-bottom: $choice-spacing / 2;
     }
   }
 }

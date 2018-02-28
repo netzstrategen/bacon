@@ -235,6 +235,34 @@ $button-padding-x: 4em !default;</pre>
           </label>
         </div>
 
+        <div class="notes">To stack several checkboxes or radios, with appropriate spacing, add <code>.choice-inputs--stacked</code>.</div>
+
+        <div class="choice-inputs choice-inputs--stacked">
+          <label class="checkbox choice-input">
+            <input type="checkbox" name="checkbox">
+            <span class="choice-input__indicator checkbox__indicator"></span>
+            <span class="choice-input__label">Checkbox one</span>
+          </label>
+          <label class="checkbox choice-input">
+            <input type="checkbox" name="checkbox">
+            <span class="choice-input__indicator checkbox__indicator"></span>
+            <span class="choice-input__label">Checkbox two</span>
+          </label>
+        </div>
+        <br>
+        <div class="choice-inputs choice-inputs--stacked">
+          <label class="radio choice-input">
+            <input type="radio" name="radio">
+            <span class="choice-input__indicator radio__indicator"></span>
+            <span class="choice-input__label">Radio one</span>
+          </label>
+          <label class="radio choice-input">
+            <input type="radio" name="radio">
+            <span class="choice-input__indicator radio__indicator"></span>
+            <span class="choice-input__label">Radio two</span>
+          </label>
+        </div>
+
         <h3 class="docs-heading">Helper text <code>.help-text</code></h3>
         <input type="password" placeholder="Enter a password">
         <p class="help-text">Your password must be at least eight characters long and contain at least one number.</p>
