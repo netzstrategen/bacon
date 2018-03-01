@@ -25,6 +25,7 @@ $input-shadow-focus: $input-shadow !default;
 
 @mixin form-element {
   display: block;
+  box-sizing: border-box;
   width: 100%;
   padding: $input-padding-y $input-padding-x;
   border: $input-border-width $input-border-color solid;
