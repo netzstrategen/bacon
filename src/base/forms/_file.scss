@@ -1,0 +1,59 @@
+/**
+ * File inputs.
+ *
+ * 1. Wrapping .file-input must be a label which refers to input child element.
+ * 2. JS snippet from docs can be included to update button text with filename.
+ */
+
+$file-input-background: color(brand) !default;
+$file-input-color: #fff !default;
+
+
+.file-input {
+  position: relative;
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+  }
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    padding: $input-padding-y $input-padding-x;
+    border-radius: $input-radius;
+    cursor: pointer;
+    background-color: $file-input-background;
+    color: $file-input-color;
+    line-height: $input-line-height;
+
+    &:before {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: $input-padding-x / 2;
+      content: '';
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik01LjAxNiAxOGgxMy45Njl2Mi4wMTZoLTEzLjk2OXYtMi4wMTZ6TTkgMTUuOTg0di02aC0zLjk4NGw2Ljk4NC02Ljk4NCA2Ljk4NCA2Ljk4NGgtMy45ODR2NmgtNnoiPjwvcGF0aD48L3N2Zz4K');
+      background-size: 100%;
+    }
+
+    &:after {
+      content: attr(data-file-upload-button-text);
+    }
+  }
+
+  &__input:valid + &__label {
+
+    &:before {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xOC45ODQgNi40MjJsLTUuNTc4IDUuNTc4IDUuNTc4IDUuNTc4LTEuNDA2IDEuNDA2LTUuNTc4LTUuNTc4LTUuNTc4IDUuNTc4LTEuNDA2LTEuNDA2IDUuNTc4LTUuNTc4LTUuNTc4LTUuNTc4IDEuNDA2LTEuNDA2IDUuNTc4IDUuNTc4IDUuNTc4LTUuNTc4eiI+PC9wYXRoPjwvc3ZnPgo=');
+    }
+
+    &:after {
+      content: attr(data-file-upload-button-text-valid);
+    }
+  }
+}

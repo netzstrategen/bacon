@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -290,6 +290,37 @@ $button-padding-x: 4em !default;</pre>
           </label>
           </div>
         </form>
+
+
+        <h3 class="docs-heading">File input <code>.file-input</code></h3>
+
+        <div class="notes">JS snippet can be included so button text is updated with the selected filename.</div>
+
+        <label class="file-input  field" data-file-upload>
+          <input class="file-input__input" type="file" required data-file-upload-input>
+          <span class="file-input__label" data-file-upload-button-text="Choose a file" data-file-upload-button-text-valid="Remove file"></span>
+        </label>
+
+        <pre>
+document.querySelectorAll('[data-file-upload]').forEach(function (e) {
+  e.querySelector('[data-file-upload-input]').addEventListener('change', function (e) {
+    var filename = this.value.split(/(\\|\/)/g).pop();
+    if (filename) {
+      this.nextElementSibling.setAttribute('data-file-upload-button-text-valid', filename);
+    }
+  });
+});</pre>
+
+        <script>
+          document.querySelectorAll('[data-file-upload]').forEach(function (e) {
+            e.querySelector('[data-file-upload-input]').addEventListener('change', function (e) {
+              var filename = this.value.split(/(\\|\/)/g).pop();
+              if (filename) {
+                this.nextElementSibling.setAttribute('data-file-upload-button-text-valid', filename);
+              }
+            });
+          });
+        </script>
 
       </div>
     </section>
