@@ -37,5 +37,5 @@
     @error "`#{$line-height}` is not a valid value for `$line-height`.";
   }
 
-  line-height: $line-height $important;
+  line-height: unquote($line-height) $important;
 }
