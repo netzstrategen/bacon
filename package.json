@@ -1,6 +1,6 @@
 {
   "name": "@netzstrategen/bacon",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "title": "Bacon",
   "description": "netzstrategen baseline CSS framework",
   "homepage": "http://www.netzstrategen.com",
@@ -11,7 +11,6 @@
     "type": "git",
     "url": "https://github.com/netzstrategen/bacon.git"
   },
-  "private": true,
   "dependencies": {
     "normalize.css": "~7.0.0",
     "sass-mq": "^3.3.2"
