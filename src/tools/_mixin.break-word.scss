@@ -1,0 +1,12 @@
+///
+/// Break longer words onto a new line. Add hyphen where browser supports.
+/// https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+///
+
+@mixin break-word() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  word-break: break-word;
+  hyphens: auto;
+}
