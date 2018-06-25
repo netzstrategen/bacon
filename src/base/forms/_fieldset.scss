@@ -7,6 +7,8 @@
  */
 
 $fieldset-padding: 0.75em !default;
+$fieldset-border-width: 1px !default;
+$fieldset-border-color: color(grayscale, light) !default;
 $legend-padding-value: 0.25em !default;
 
 
@@ -18,7 +20,7 @@ fieldset {
 
 .fieldset {
   padding: $fieldset-padding;
-  border: 1px color(grayscale, light) solid;
+  border: $fieldset-border-width $fieldset-border-color solid;
 
   legend {
     padding: 0 $legend-padding-value;
