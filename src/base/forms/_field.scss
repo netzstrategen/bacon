@@ -12,3 +12,19 @@ $field-spacing: $global-spacing-unit !default;
     margin-bottom: $field-spacing;
   }
 }
+
+
+/**
+ * Grouped fields
+ * Wraps several form inputs. E.g. input with connected button.
+ */
+
+%field-group,
+.field-group {
+  @extend %field;
+  display: flex;
+
+  * + * {
+    margin-left: -$input-border-width;
+  }
+}
