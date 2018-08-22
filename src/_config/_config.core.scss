@@ -93,7 +93,7 @@ $global-transition: 0.1s ease-in-out !default;
 
 // Sass-mq settings
 
-$mq-base-font-size: $global-font-size;
+$mq-base-font-size: $global-font-size !default;
 
 $global-breakpoints: () !default;
 $global-breakpoints: map-merge((
