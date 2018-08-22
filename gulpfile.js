@@ -2,13 +2,13 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCss = require('gulp-clean-css');
 const gulp = require('gulp');
 const gulpif = require('gulp-if');
+const magicImporter = require('node-sass-magic-importer');
 const pkg = require('./package.json');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const sassdoc = require('sassdoc');
-const sassModuleImporter = require('sass-module-importer');
 const sourcemaps = require('gulp-sourcemaps');
 const stylelint = require('gulp-stylelint');
 
@@ -48,7 +48,9 @@ const cssTasks = function(filename, options = { outputStyle: 'nested', sourcemap
     }))
     .pipe(gulpif(options.sourcemaps, sourcemaps.init()))
     .pipe(sass({
-      importer: sassModuleImporter(),
+      importer: magicImporter({
+        disableImportOnce: true
+      }),
       outputStyle: options.outputStyle
     }).on('error', sass.logError))
     .pipe(autoprefixer(pkg.browserslist))
