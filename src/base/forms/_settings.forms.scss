@@ -30,6 +30,8 @@ $input-shadow-focus: $input-shadow !default;
   padding: $input-padding-y $input-padding-x;
   border: $input-border-width $input-border-color solid;
   border-radius: $input-radius;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   appearance: none;
   background-color: $input-background;
   box-shadow: $input-shadow;
