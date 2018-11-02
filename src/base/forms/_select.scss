@@ -4,17 +4,22 @@
  * 1. Receives standardised form input styling.
  * 2. Uses standardised font-size and line-height to match height of other inputs.
  * 3. Inline SVG arrow icon.
+ * 4. Ensure text color matches other form inputs/content.
  */
 
 $select-height: calc(#{$input-font-size * $input-line-height + $input-padding-y * 2} + #{$input-border-width * 2}) !default;
+$select-bg-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>") !default;
+$select-bg-position: right center !default;
+$select-bg-size: 9px 6px !default;
 
 
 select {
   @include form-element; // [1]
   height: $select-height; // [2]
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>"); /* [3] */
+  background-image: $select-bg-image; // [3]
   background-origin: content-box;
-  background-position: right center;
+  background-position: $select-bg-position;
   background-repeat: no-repeat;
-  background-size: 9px 6px;
+  background-size: $select-bg-size;
+  color: inherit; // [4]
 }
