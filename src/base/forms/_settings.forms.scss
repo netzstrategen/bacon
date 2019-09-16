@@ -35,6 +35,7 @@ $input-shadow-focus: $input-shadow !default;
   appearance: none;
   background-color: $input-background;
   box-shadow: $input-shadow;
+  font: inherit;
   font-size: $input-font-size;
   line-height: $input-line-height;
   // transition: border $input-transition;
