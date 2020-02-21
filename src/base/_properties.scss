@@ -1,0 +1,41 @@
+/**
+ * Global properties.
+ */
+
+:root {
+
+  /**
+   * Colors.
+   */
+  @each $pallet, $tones in $global-colors {
+    @each $tone, $color in $tones {
+      // "base" tones are considored the default the tone label an be omitted from the property name.
+      @if $tone == base {
+        --c-#{$pallet}: #{$color};
+      }
+      @else {
+        --c-#{$pallet}-#{$tone}: #{$color};
+      }
+    }
+  }
+
+  /**
+   * Typography.
+   */
+  --g-font-family: #{$global-font-family};
+  --g-alt-font-family: #{$alt-font-family};
+  --g-font-size: #{$global-font-size};
+  --g-font-weight: #{$global-font-weight};
+  --g-line-height: #{$global-line-height};
+
+  --g-font-size-h1: #{$global-font-size-h1};
+  --g-font-size-h2: #{$global-font-size-h2};
+  --g-font-size-h3: #{$global-font-size-h3};
+  --g-font-size-h4: #{$global-font-size-h4};
+
+  /**
+   * Spacing.
+   */
+  --g-spacing-unit: #{$global-spacing-unit};
+
+}
