@@ -9,7 +9,7 @@
    */
   @each $pallet, $tones in $global-colors {
     @each $tone, $color in $tones {
-      // "base" tones are considored the default the tone label an be omitted from the property name.
+      // "base" tones are considored the default so the tone label an be omitted from the property name.
       @if $tone == base {
         --c-#{$pallet}: #{$color};
       }
