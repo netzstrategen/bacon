@@ -9,7 +9,7 @@
    */
   @each $pallet, $tones in $global-colors {
     @each $tone, $color in $tones {
-      // "base" tones are considored the default so the tone label can be omitted from the property name.
+      // "base" tones are considered the default so the tone label can be omitted from the property name.
       @if $tone == base {
         --c-#{$pallet}: #{$color};
       }
@@ -29,9 +29,13 @@
   --g-line-height: #{$global-line-height};
 
   --g-font-size-h1: #{$global-font-size-h1};
+  --g-line-height-h1: #{$global-line-height-h1};
   --g-font-size-h2: #{$global-font-size-h2};
+  --g-line-height-h2: #{$global-line-height-h2};
   --g-font-size-h3: #{$global-font-size-h3};
+  --g-line-height-h3: #{$global-line-height-h3};
   --g-font-size-h4: #{$global-font-size-h4};
+  --g-line-height-h4: #{$global-line-height-h4};
 
   /**
    * Spacing.

@@ -6,9 +6,9 @@
 
 html {
   font-family: $global-font-family;
-  font-size: ($global-font-size / 16px) * 1em;
+  font-size: $global-font-size;
   font-weight: $global-font-weight;
-  line-height: $global-line-height / $global-font-size;
+  line-height: $global-line-height;
   color: color(type);
   -webkit-text-size-adjust: 100%; // [1]
   -ms-text-size-adjust: 100%; // [1]
@@ -24,27 +24,32 @@ html {
 /* stylelint-disable selector-list-comma-newline-after */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $global-heading-weight;
+  color: $global-heading-color;
 }
 /* stylelint-enable selector-list-comma-newline-after */
 
 h1,
 %h1 {
-  @include font-size($global-font-size-h1, $global-line-height-h1);
+  font-size: $global-font-size-h1;
+  line-height: $global-line-height-h1;
 }
 
 h2,
 %h2 {
-  @include font-size($global-font-size-h2, $global-line-height-h2);
+  font-size: $global-font-size-h2;
+  line-height: $global-line-height-h2;
 }
 
 h3,
 %h3 {
-  @include font-size($global-font-size-h3, $global-line-height-h3);
+  font-size: $global-font-size-h3;
+  line-height: $global-line-height-h3;
 }
 
 h4,
 %h4 {
-  @include font-size($global-font-size-h4, $global-line-height-h4);
+  font-size: $global-font-size-h4;
+  line-height: $global-line-height-h4;
 }
 
 
@@ -54,7 +59,7 @@ h4,
 
 hr {
   height: $hr-thickness;
-  margin: $hr-spacing;
   border: 0;
+  margin: $hr-spacing;
   background-color: $hr-bg;
 }
