@@ -75,8 +75,8 @@ pre {
 
 .container {
   max-width: 800px;
-  padding-right: mat.div($global-spacing-unit, 2);
-  padding-left: mat.div($global-spacing-unit, 2);
+  padding-right: math.div($global-spacing-unit, 2);
+  padding-left: math.div($global-spacing-unit, 2);
   margin: 0 auto;
 }
 
