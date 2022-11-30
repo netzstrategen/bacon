@@ -5,6 +5,8 @@
  * 2. Make the input proportionally bigger than it's parent font-size
  */
 
+@use 'sass:math';
+
 $choice-spacing: 1em !default;
 $choice-indicator-border-width: 1px !default;
 $choice-indicator-border-color: color(brand) !default;
@@ -62,7 +64,7 @@ $radio-indicator-checked-background-color: color(brand) !default;
     flex-direction: column;
 
     .choice-input:not(:last-child) {
-      margin-bottom: $choice-spacing / 2;
+      margin-bottom: math.div($choice-spacing, 2);
     }
   }
 }
